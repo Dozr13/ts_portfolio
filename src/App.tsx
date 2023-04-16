@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useRef, useState } from 'react'
+import Landing from './pages/Landing/Landing'
+import AboutMe from './pages/Home/AboutMe'
+import Hamburger from './components/ui/Hamburger/Hamburger';
+import SideMenu from './components/ui/SideMenu/SideMenu';
 
-function App() {
+const App = () => {
+  const [open, setOpen] = useState<boolean>(false);
+  const node = useRef<any>();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div ref={node}>
+        <Hamburger open={open} setOpen={setOpen} />
+        <SideMenu open={open} />
+      </div>
+      <Landing />
+      <AboutMe />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
