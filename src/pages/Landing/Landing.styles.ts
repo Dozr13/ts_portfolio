@@ -1,5 +1,9 @@
 import styled from "styled-components"
 
+interface Props {
+  open: boolean
+}
+
 export const LandingContentContainer = styled.div`
   height: 100vh;
   width: 100vw;
@@ -8,7 +12,8 @@ export const LandingContentContainer = styled.div`
   justify-content: center;
   align-items: center;
   color: white;
-  background-color: #303731;
+  /* background-color: #303731; */
+  background: linear-gradient(direction, color, color, color, color);
 `
 
 export const LandingHeader = styled.header`
@@ -34,12 +39,13 @@ export const Logo = styled.img`
   margin: 55px;
 `
 
-export const NameSignature = styled.p`
+export const NameSignature = styled.p<Props>`
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 1%;
+  left: 2rem;
   font-family: "Charm", cursive;
   font-size: 3rem;
-  padding-left: 3.5rem;
-  margin-top: 3rem;
+  padding-left: 4rem;
+  margin-top: 2.5rem;
+  color: ${({ open }) => (open ? "#0D0C1D" : "#EFFFFA")};
 `

@@ -3,11 +3,15 @@ import { ReactComponent as Logo } from '../../assets/images/svg/logo-stamp.svg';
 
 import { LandingContentContainer, LandingHeader, LogoContainer, NameSignature } from './Landing.styles'
 
-const Landing = () => {
+interface Props {
+  open: boolean;
+}
+
+const Landing = ({ open }: Props) => {
   return (
     <LandingContentContainer>
       <LandingHeader>
-        <NameSignature>Wade Pate</NameSignature>
+        <NameSignature open={open}>Wade Pate</NameSignature>
       </LandingHeader>
       <LogoContainer>
         <Logo src={require('../../assets/images/svg/logo-stamp.svg')} alt='WP Logo' />
@@ -16,22 +20,5 @@ const Landing = () => {
   )
 }
 
-// const useOnClickOutside = (ref, handler) => {
-//   React.useEffect(() => {
-//     const listener = event => {
-//       if (!ref.current || ref.current.contains(event.target)) {
-//         return;
-//       }
-//       handler(event);
-//     };
-//     document.addEventListener('mousedown', listener);
-
-//     return () => {
-//       document.removeEventListener('mousedown', listener);
-//     };
-//   },
-//     [ref, handler],
-//   );
-// };
 
 export default Landing

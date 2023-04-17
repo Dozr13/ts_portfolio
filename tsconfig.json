@@ -37,7 +37,7 @@
     "inlineSourceMap": false,
     "inlineSources": false,
     "isolatedModules": false,
-    "lib": ["es2017", "esnext.asynciterable"],
+    "lib": ["es2018", "dom"],
     "module": "commonjs",
     "moduleResolution": "node",
     "newLine": "lf",

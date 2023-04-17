@@ -6,9 +6,9 @@ interface Props {
 }
 
 export const StyledBurger = styled.button<Props>`
-  position: absolute;
+  position: fixed;
   top: 5%;
-  right: 2rem;
+  left: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
