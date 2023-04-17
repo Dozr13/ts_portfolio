@@ -20,7 +20,7 @@ const App = () => {
         <SideMenu open={open} />
       </div>
       <Landing open={open} />
-      <AboutMe />
+      <AboutMe id="about-me" />
       <Blog />
     </ThemeProvider>
   )

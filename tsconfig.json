@@ -69,6 +69,11 @@
     "outDir": "../../build/lib",
     "typeRoots": ["./assets", "./node_modules/@types"]
   },
-  "include": ["src/**/*"],
+  "include": [
+    "src/**/*",
+    "src/pages/**/*",
+    "src/components/**/*",
+    "src/index.tsx"
+  ],
   "exclude": []
 }

@@ -11,8 +11,8 @@ export const StyledMenu = styled.nav<Props>`
   justify-content: center;
   background: #f1f1f1;
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
-  height: 40vh;
-  text-align: left;
+  height: 100vh;
+  text-align: center;
   padding: 2rem;
   padding-bottom: 0;
   top: 0;

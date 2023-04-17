@@ -17,6 +17,10 @@ const SideMenu = ({ open }: Props) => {
         Projects
       </a>
       <a href="/">
+        <span role="img" aria-label="blog">&#x1F4DD;</span>
+        Blog
+      </a>
+      <a href="/">
         <span role="img" aria-label="contact">&#x1f4e9;</span>
         Contact
       </a>

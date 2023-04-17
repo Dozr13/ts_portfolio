@@ -1,11 +1,11 @@
 import React from 'react'
-import useInput from '../../hooks/useInput'
+import useInput from '../../../hooks/useInput'
 
 const Form = () => {
-  const nameInput = useInput({})
-  const emailInput = useInput()
+  const nameInput = useInput({ initialValue: '' })
+  const emailInput = useInput({ initialValue: '' })
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     console.log(nameInput.value)
