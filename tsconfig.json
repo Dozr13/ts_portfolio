@@ -67,8 +67,8 @@
     "traceResolution": false,
     "rootDir": "",
     "outDir": "../../build/lib",
-    "typeRoots": []
+    "typeRoots": ["./assets", "./node_modules/@types"]
   },
-  "include": ["**/*.ts"],
+  "include": ["src/**/*"],
   "exclude": []
 }

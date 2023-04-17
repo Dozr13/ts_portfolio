@@ -1,7 +1,7 @@
-import React, { useRef, useState } from 'react'
+import React from 'react'
 import { ReactComponent as Logo } from '../../assets/images/svg/logo-stamp.svg';
 
-import { LandingContentContainer, LandingHeader, LogoContainer, NameSignature } from './Landing.styles'
+import { IntroContainer, IntroText, LandingContentContainer, LogoContainer, NameSignature } from './Landing.styles'
 
 interface Props {
   open: boolean;
@@ -10,12 +10,16 @@ interface Props {
 const Landing = ({ open }: Props) => {
   return (
     <LandingContentContainer>
-      <LandingHeader>
+      {/* <LandingHeader>
         <NameSignature open={open}>Wade Pate</NameSignature>
-      </LandingHeader>
+      </LandingHeader> */}
       <LogoContainer>
-        <Logo src={require('../../assets/images/svg/logo-stamp.svg')} alt='WP Logo' />
+        <Logo title='WP Logo' />
       </LogoContainer>
+      <IntroContainer>
+        <IntroText>Hi! I'm</IntroText>
+        <NameSignature open={open}>Wade Pate</NameSignature>
+      </IntroContainer>
     </LandingContentContainer>
   )
 }

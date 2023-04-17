@@ -30,21 +30,38 @@ export const LogoContainer = styled.div`
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  width: 100%;
 `
 
-export const Logo = styled.img`
-  width: 5vh;
-  height: 3vh;
-  margin: 55px;
+export const IntroContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
+
+export const IntroText = styled.p`
+  font-size: 2rem;
+  margin-bottom: 0;
 `
 
 export const NameSignature = styled.p<Props>`
   position: absolute;
-  top: 1%;
-  left: 2rem;
+  bottom: 1%;
   font-family: "Charm", cursive;
   font-size: 3rem;
-  padding-left: 4rem;
-  margin-top: 2.5rem;
+  margin-top: 0;
   color: ${({ open }) => (open ? "#0D0C1D" : "#EFFFFA")};
 `
+
+//! Full screen
+// export const NameSignature = styled.p<Props>`
+//   position: absolute;
+//   top: 1%;
+//   left: 2rem;
+//   font-family: "Charm", cursive;
+//   font-size: 3rem;
+//   padding-left: 4rem;
+//   margin-top: 2.5rem;
+//   color: ${({ open }) => (open ? "#0D0C1D" : "#EFFFFA")};
+// `
