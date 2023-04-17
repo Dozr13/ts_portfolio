@@ -4,7 +4,7 @@ import { BlogContainer } from './Blog.styles'
 
 const Blog = () => {
   return (
-    <BlogContainer>Blog</BlogContainer>
+    <BlogContainer id="blog">Blog</BlogContainer>
   )
 }
 

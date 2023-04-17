@@ -4,7 +4,7 @@ interface Props {
   open: boolean
 }
 
-export const LandingContentContainer = styled.div`
+export const LandingContainer = styled.div`
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -30,6 +30,7 @@ export const LogoContainer = styled.div`
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  height: fit-content;
   width: 100%;
 `
 
@@ -38,20 +39,27 @@ export const IntroContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: fit-content;
 `
 
 export const IntroText = styled.p`
   font-size: 2rem;
   margin-bottom: 0;
+  flex: 1;
 `
 
 export const NameSignature = styled.p<Props>`
-  position: absolute;
-  bottom: 1%;
+  /* position: absolute; */
+  /* bottom: 1%; */
   font-family: "Charm", cursive;
-  font-size: 3rem;
-  margin-top: 0;
+  font-size: 3.5rem;
+  margin: 0;
   color: ${({ open }) => (open ? "#0D0C1D" : "#EFFFFA")};
+`
+
+export const TitleText = styled.p`
+  font-size: 1.3rem;
+  margin-top: 0;
 `
 
 //! Full screen

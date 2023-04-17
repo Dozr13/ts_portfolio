@@ -18,7 +18,7 @@ export const StyledBurger = styled.button<Props>`
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 10;
+  z-index: 20;
 
   &:focus {
     outline: none;

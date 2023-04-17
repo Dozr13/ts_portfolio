@@ -1,7 +1,7 @@
 import React from 'react'
 import { ReactComponent as Logo } from '../../assets/images/svg/logo-stamp.svg';
 
-import { IntroContainer, IntroText, LandingContentContainer, LogoContainer, NameSignature } from './Landing.styles'
+import { IntroContainer, IntroText, LandingContainer, LogoContainer, NameSignature, TitleText } from './Landing.styles'
 
 interface Props {
   open: boolean;
@@ -9,7 +9,7 @@ interface Props {
 
 const Landing = ({ open }: Props) => {
   return (
-    <LandingContentContainer>
+    <LandingContainer id="home">
       {/* <LandingHeader>
         <NameSignature open={open}>Wade Pate</NameSignature>
       </LandingHeader> */}
@@ -18,9 +18,12 @@ const Landing = ({ open }: Props) => {
       </LogoContainer>
       <IntroContainer>
         <IntroText>Hi! I'm</IntroText>
+
         <NameSignature open={open}>Wade Pate</NameSignature>
+
+        <TitleText>Full-stack Developer</TitleText>
       </IntroContainer>
-    </LandingContentContainer>
+    </LandingContainer>
   )
 }
 

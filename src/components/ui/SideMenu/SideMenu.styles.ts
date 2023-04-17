@@ -18,6 +18,7 @@ export const StyledMenu = styled.nav<Props>`
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;
+  z-index: 10;
 
   @media (max-width: 576px) {
     width: 100%;
@@ -32,6 +33,7 @@ export const StyledMenu = styled.nav<Props>`
     color: #0d0c1d;
     text-decoration: none;
     transition: color 0.3s linear;
+    cursor: pointer;
 
     @media (max-width: 576px) {
       font-size: 1.5rem;
