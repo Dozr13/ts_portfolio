@@ -12,8 +12,7 @@ export const LandingContentContainer = styled.div`
   justify-content: center;
   align-items: center;
   color: white;
-  /* background-color: #303731; */
-  background: linear-gradient(direction, color, color, color, color);
+  background-color: #303731;
 `
 
 export const LandingHeader = styled.header`
