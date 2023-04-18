@@ -1,20 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { StyledMenu } from './SideMenu.styles';
+import { MenuContext } from '../../../context/MenuContext';
 
 interface Props {
-  open: boolean;
   scrollToElement: (id: string) => void;
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const SideMenu = ({ open, scrollToElement, setOpen }: Props) => {
+const SideMenu = ({ scrollToElement }: Props) => {
+  const { isOpen, setIsOpen } = useContext(MenuContext);
+
   const handleMenuItemClick = (id: string) => {
     scrollToElement(id);
-    setOpen(false);
+    setIsOpen(false);
   }
 
   return (
-    <StyledMenu open={open}>
+    <StyledMenu isOpen={isOpen}>
       <a onClick={() => handleMenuItemClick("about-me")}>
         <span role="img" aria-label="about me">&#x1F9D9;&#x200D;&#x2642;&#xFE0F;</span>
         About me

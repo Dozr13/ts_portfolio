@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 interface Props {
-  open: boolean
+  isOpen: boolean
 }
 
 export const StyledMenu = styled.nav<Props>`
@@ -10,7 +10,8 @@ export const StyledMenu = styled.nav<Props>`
   flex-direction: column;
   justify-content: center;
   background: #f1f1f1;
-  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
+  transform: ${({ isOpen }) =>
+    isOpen ? "translateX(0)" : "translateX(-100%)"};
   height: 100vh;
   text-align: center;
   padding: 2rem;

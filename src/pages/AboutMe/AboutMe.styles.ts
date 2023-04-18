@@ -1,55 +1,76 @@
 import styled from "styled-components"
 
 export const AboutMeContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 2rem;
   height: 100vh;
   width: 100vw;
   position: relative;
   color: white;
   background-color: #303731;
+  align-items: end;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "photo"
+      "info";
+    grid-gap: 1rem;
+  }
+
+  @media screen and (max-width: 425px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "photo"
+      "info";
+    grid-gap: 1rem;
+  }
 `
 
 export const DescriptionBox = styled.div`
-  height: 70%;
-  width: 80%;
   position: relative;
+  width: 80%;
   top: 50%;
   left: 50%;
-  /* display: flex;
-  flex-direction: column;
-  align-items: flex-start; */
-
   transform: translate(-50%, -50%);
 `
 
 export const PhotoBox = styled.div`
-  float: left;
-  height: 25%;
-  width: auto;
-  /* flex: 0; */
-  /* position: absolute; */
-  /* top: 0;
-  left: 0; */
-  border-right: 3px solid #000;
-  border-bottom: 4px solid #000;
+  grid-area: photo;
+  float: right;
+  height: 100px;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
   border-radius: 100%;
-  margin: 0 1rem 1rem 0;
+  margin: 0 0 1rem 1rem;
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 export const ImageOfSelf = styled.img`
-  float: left;
-  height: 100%;
-  width: 100%;
+  width: 100px;
+  height: 100px;
   border-radius: 100%;
+  margin-right: 1rem;
+
+  @media screen and (max-width: 425px) {
+    float: right;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    margin-left: 1rem;
+  }
 `
 
 export const InformationBox = styled.div`
-  height: 100%;
-  width: 100%;
-  /* flex: 1; */
-  opacity: 0.8;
+  grid-area: info;
   background-color: gray;
   border: 2px solid blue;
   text-align: justify;
-  text-indent: 2em;
+  padding: 1rem;
 `

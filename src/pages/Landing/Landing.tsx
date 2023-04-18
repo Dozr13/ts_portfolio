@@ -4,14 +4,14 @@ import { ReactComponent as Logo } from '../../assets/images/svg/logo-stamp.svg';
 import { IntroContainer, IntroText, LandingContainer, LogoContainer, NameSignature, TitleText } from './Landing.styles'
 
 interface Props {
-  open: boolean;
+  isOpen: boolean;
 }
 
-const Landing = ({ open }: Props) => {
+const Landing = ({ isOpen }: Props) => {
   return (
     <LandingContainer id="home">
       {/* <LandingHeader>
-        <NameSignature open={open}>Wade Pate</NameSignature>
+        <NameSignature isOpen={isOpen}>Wade Pate</NameSignature>
       </LandingHeader> */}
       <LogoContainer>
         <Logo title='WP Logo' />
@@ -19,7 +19,7 @@ const Landing = ({ open }: Props) => {
       <IntroContainer>
         <IntroText>Hi! I'm</IntroText>
 
-        <NameSignature open={open}>Wade Pate</NameSignature>
+        <NameSignature isOpen={isOpen}>Wade Pate</NameSignature>
 
         <TitleText>Full-stack Developer</TitleText>
       </IntroContainer>

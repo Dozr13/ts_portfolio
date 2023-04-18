@@ -10,11 +10,12 @@ import { theme } from './styles/theme'
 import Blog from './pages/Blog/Blog';
 import Projects from './pages/Projects/Projects';
 import Contact from './pages/Contact/Contact';
+import { MenuContext } from './context/MenuContext';
 
 const App = () => {
-  const [open, setOpen] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   const node = useRef<HTMLDivElement>(null);
-  useOnClickOutside({ ref: node, handler: () => setOpen(false) });
+  useOnClickOutside({ ref: node, handler: () => setIsOpen(false) });
 
   // Scroll to a given element ID using smooth scrolling
   const scrollToElement = (id: string) => {
@@ -27,21 +28,20 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <div ref={node}>
-        <Hamburger open={open} setOpen={setOpen} />
-        <SideMenu open={open} scrollToElement={scrollToElement} setOpen={setOpen} />
-      </div>
-      <Landing open={open} />
+      <MenuContext.Provider value={{ isOpen, setIsOpen }}>
+        <div ref={node}>
+          <Hamburger />
+          <SideMenu scrollToElement={scrollToElement} />
+        </div>
+        <Landing isOpen={isOpen} />
 
-      <AboutMe />
-
-      <Projects />
-
-      <Blog />
-
-      <Contact />
+        <AboutMe />
+        <Projects />
+        <Blog />
+        <Contact />
+      </MenuContext.Provider>
     </ThemeProvider>
-  )
-}
+  );
+};
 
-export default App
+export default App;

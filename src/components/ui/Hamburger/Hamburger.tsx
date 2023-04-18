@@ -1,14 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { StyledBurger } from './Hamburger.styles';
+import { MenuContext } from '../../../context/MenuContext';
 
-interface Props {
-  open: boolean;
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
-}
+const Hamburger = () => {
+  const { isOpen, setIsOpen } = useContext(MenuContext);
 
-const Hamburger = ({ open, setOpen }: Props) => {
   return (
-    <StyledBurger open={open} onClick={() => setOpen(!open)}>
+    <StyledBurger isOpen={isOpen} onClick={() => setIsOpen(!isOpen)}>
       <div />
       <div />
       <div />

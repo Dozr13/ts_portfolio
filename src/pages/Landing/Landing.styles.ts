@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 interface Props {
-  open: boolean
+  isOpen: boolean
 }
 
 export const LandingContainer = styled.div`
@@ -54,7 +54,7 @@ export const NameSignature = styled.p<Props>`
   font-family: "Charm", cursive;
   font-size: 3.5rem;
   margin: 0;
-  color: ${({ open }) => (open ? "#0D0C1D" : "#EFFFFA")};
+  color: ${({ isOpen }) => (isOpen ? "#0D0C1D" : "#EFFFFA")};
 `
 
 export const TitleText = styled.p`
@@ -71,5 +71,5 @@ export const TitleText = styled.p`
 //   font-size: 3rem;
 //   padding-left: 4rem;
 //   margin-top: 2.5rem;
-//   color: ${({ open }) => (open ? "#0D0C1D" : "#EFFFFA")};
+//   color: ${({ isOpen }) => (isOpen ? "#0D0C1D" : "#EFFFFA")};
 // `
