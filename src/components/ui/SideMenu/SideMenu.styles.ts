@@ -4,6 +4,13 @@ interface Props {
   isOpen: boolean
 }
 
+export const MenuItemLinks = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  justify-content: center;
+`
+
 export const StyledMenu = styled.nav<Props>`
   position: fixed;
   display: flex;
@@ -14,14 +21,17 @@ export const StyledMenu = styled.nav<Props>`
     isOpen ? "translateX(0)" : "translateX(-100%)"};
   height: 100vh;
   text-align: center;
-  padding: 2rem;
   padding-bottom: 0;
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;
   z-index: 10;
 
-  @media (max-width: 576px) {
+  @media screen and (max-width: 768px) {
+    width: 50%;
+  }
+
+  @media screen and (max-width: 425px) {
     width: 100%;
   }
 
@@ -36,9 +46,13 @@ export const StyledMenu = styled.nav<Props>`
     transition: color 0.3s linear;
     cursor: pointer;
 
-    @media (max-width: 576px) {
+    @media screen and (max-width: 768px) {
       font-size: 1.5rem;
       text-align: center;
+    }
+
+    @media screen and (max-width: 425px) {
+      font-size: 1.5rem;
     }
 
     &:hover {

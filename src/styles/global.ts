@@ -19,4 +19,7 @@ export const GlobalStyles = createGlobalStyle`
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
   }
-  `
+  :focus {
+    outline: none;
+  }
+`

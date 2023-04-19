@@ -7,10 +7,11 @@ import SideMenu from './components/ui/SideMenu/SideMenu';
 import useOnClickOutside from './hooks/useOnClickOutside'
 import { ThemeProvider } from 'styled-components';
 import { theme } from './styles/theme'
-import Blog from './pages/Blog/Blog';
 import Projects from './pages/Projects/Projects';
 import Contact from './pages/Contact/Contact';
 import { MenuContext } from './context/MenuContext';
+// import SocialLinksBar from './components/ui/SocialLinks/SocialLinksBar';
+// import { SocialLinksPageBox } from './components/ui/SocialLinks/SocialLinksBar.styles';
 
 const App = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -34,11 +35,12 @@ const App = () => {
           <SideMenu scrollToElement={scrollToElement} />
         </div>
         <Landing isOpen={isOpen} />
-
         <AboutMe />
         <Projects />
-        <Blog />
         <Contact />
+        {/* <SocialLinksPageBox>
+          <SocialLinksBar backgroundColor='#303731' />
+        </SocialLinksPageBox> */}
       </MenuContext.Provider>
     </ThemeProvider>
   );

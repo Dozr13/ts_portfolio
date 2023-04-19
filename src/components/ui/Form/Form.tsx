@@ -1,24 +1,49 @@
 import React from 'react'
 import useInput from '../../../hooks/useInput'
+import { FormStyled, FormGroup, FormInput, FormLabel, FormHeaderContainer, FormHeaderText, FormSubHeaderText, FormButtonContainer } from './Form.styles'
+import Button from '../Button/Button'
 
 const Form = () => {
   const nameInput = useInput({ initialValue: '' })
   const emailInput = useInput({ initialValue: '' })
+  const messageInput = useInput({ initialValue: '' })
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     console.log(nameInput.value)
     console.log(emailInput.value)
+    console.log(messageInput.value)
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type='text' {...nameInput} />
-      <input type='email' {...emailInput} />
+    <FormStyled onSubmit={handleSubmit}>
+      <FormHeaderContainer grid-area='header'>
+        <FormHeaderText>Let's talk.</FormHeaderText>
+        <br />
+        <FormSubHeaderText>New projects, freelance inquiry or even a coffee</FormSubHeaderText>
+      </FormHeaderContainer>
 
-      <button type='submit'>Submit</button>
-    </form>
+      <FormGroup>
+        <FormLabel>Name *</FormLabel>
+        {/* // TODO: build out custom inputs */}
+        <FormInput type='text' required {...nameInput} />
+      </FormGroup>
+
+      <FormGroup>
+        <FormLabel>Email *</FormLabel>
+        <FormInput type='text' required {...emailInput} />
+      </FormGroup>
+
+      <FormGroup>
+        <FormLabel>Message *</FormLabel>
+        <FormInput type='text' required {...messageInput} />
+      </FormGroup>
+
+      <FormButtonContainer>
+        <Button title='Send Message' />
+      </FormButtonContainer>
+    </FormStyled>
   )
 }
 

@@ -7,7 +7,7 @@ interface Props {
 
 export const StyledBurger = styled.button<Props>`
   position: fixed;
-  top: 5%;
+  top: 3rem;
   left: 3rem;
   display: flex;
   flex-direction: column;
@@ -19,6 +19,12 @@ export const StyledBurger = styled.button<Props>`
   cursor: pointer;
   padding: 0;
   z-index: 20;
+
+  @media screen and (max-width: 425px) {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+  }
 
   &:focus {
     outline: none;

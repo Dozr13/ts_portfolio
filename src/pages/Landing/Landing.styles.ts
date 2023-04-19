@@ -13,6 +13,7 @@ export const LandingContainer = styled.div`
   align-items: center;
   color: white;
   background-color: #303731;
+  padding: 0 0 2.5rem 0;
 `
 
 export const LandingHeader = styled.header`
@@ -20,17 +21,15 @@ export const LandingHeader = styled.header`
   width: 100vw;
   position: absolute;
   top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `
 
 export const LogoContainer = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  height: fit-content;
+  height: 70%;
   width: 100%;
 `
 
@@ -49,8 +48,6 @@ export const IntroText = styled.p`
 `
 
 export const NameSignature = styled.p<Props>`
-  /* position: absolute; */
-  /* bottom: 1%; */
   font-family: "Charm", cursive;
   font-size: 3.5rem;
   margin: 0;
