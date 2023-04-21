@@ -1,8 +1,11 @@
-import styled from "styled-components"
+import styled from 'styled-components'
+
+import { theme } from '../../styles/theme'
 
 export const ContactContainer = styled.div`
-  width: 100%;
+  width: ${theme.sizes.percentage['100']};
   position: relative;
   color: white;
-  background-color: #303731;
+  background: ${theme.primaryDark};
+  padding-bottom: 3rem;
 `

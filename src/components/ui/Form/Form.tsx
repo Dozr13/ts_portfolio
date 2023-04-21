@@ -1,6 +1,7 @@
 import React from 'react'
-import useInput from '../../../hooks/useInput'
+
 import { FormStyled, FormGroup, FormInput, FormLabel, FormHeaderContainer, FormHeaderText, FormSubHeaderText, FormButtonContainer } from './Form.styles'
+import useInput from '../../../hooks/useInput'
 import Button from '../Button/Button'
 
 const Form = () => {
@@ -15,6 +16,10 @@ const Form = () => {
     console.log(emailInput.value)
     console.log(messageInput.value)
   }
+
+  // * May implement later
+  // const textAreaRef = useRef<HTMLTextAreaElement>(null);
+  // useAutosizeTextArea(textAreaRef.current, messageInput.value);
 
   return (
     <FormStyled onSubmit={handleSubmit}>

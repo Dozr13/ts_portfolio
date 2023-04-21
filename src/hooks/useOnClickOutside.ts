@@ -1,4 +1,4 @@
-import { useEffect, MutableRefObject, SetStateAction } from "react"
+import { useEffect, MutableRefObject, SetStateAction } from 'react'
 
 interface Props {
   ref: MutableRefObject<Element | null>
@@ -13,10 +13,10 @@ const useOnClickOutside = ({ ref, handler }: Props): void => {
       }
       handler(false)
     }
-    document.addEventListener("mousedown", listener)
+    document.addEventListener('mousedown', listener)
 
     return () => {
-      document.removeEventListener("mousedown", listener)
+      document.removeEventListener('mousedown', listener)
     }
   }, [ref, handler])
 }

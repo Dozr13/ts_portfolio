@@ -1,5 +1,7 @@
 import React from "react";
+
 import { FaGithub, FaTwitter, FaLinkedin, FaFilePdf } from "react-icons/fa";
+
 import { SocialLink, SocialLinksBarWrapper, SocialLinksContainer, SocialLinksHeader } from "./SocialLinksBar.styles";
 
 interface Props {

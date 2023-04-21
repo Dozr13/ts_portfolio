@@ -1,8 +1,7 @@
 import React from 'react'
-import myImage from "../../assets/images/myImage.jpg"
 
 import { AboutMeContainer, ImageOfSelf, InformationBox, PhotoBox } from './AboutMe.styles'
-
+import myImage from "../../assets/images/myImage.jpg"
 import PageTitle from '../../components/ui/PageTitle/PageTitle'
 import { TitleBox } from '../../components/ui/PageTitle/PageTitle.styles'
 

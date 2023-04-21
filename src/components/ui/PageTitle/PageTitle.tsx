@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { PageTitleText } from './PageTitle.styles'
 
 interface Props {

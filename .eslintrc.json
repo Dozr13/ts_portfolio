@@ -5,6 +5,7 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:import/errors"
   ],
+  "plugins": ["eslint-plugin-html"],
   "settings": {
     "import/resolver": {
       "node": {
@@ -62,6 +63,6 @@
   },
   "env": {
     "browser": true,
-    "es2021": true
+    "es6": true
   }
 }
