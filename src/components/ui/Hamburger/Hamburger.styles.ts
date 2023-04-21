@@ -8,13 +8,13 @@ interface Props {
 
 export const StyledBurger = styled.button<Props>`
   position: fixed;
-  top: 3rem;
-  left: 3rem;
+  top: ${theme.sizes.rem['lg']};
+  left: ${theme.sizes.rem['lg']};
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 2rem;
-  height: 2rem;
+  width: ${theme.sizes.rem['mdlg']};
+  height: ${theme.sizes.rem['mdlg']};
   background: transparent;
   border: none;
   cursor: pointer;
@@ -23,8 +23,8 @@ export const StyledBurger = styled.button<Props>`
 
   @media screen and (max-width: ${theme.pageSizes.mobile}) {
     position: fixed;
-    top: 1rem;
-    left: 1rem;
+    top: ${theme.sizes.rem['sm']};
+    left: ${theme.sizes.rem['sm']};
   }
 
   &:focus {
@@ -32,8 +32,8 @@ export const StyledBurger = styled.button<Props>`
   }
 
   div {
-    width: 2rem;
-    height: 0.25rem;
+    width: ${theme.sizes.rem['mdlg']};
+    height: ${theme.sizes.rem['xxs']};
     background: ${({ isOpen }) =>
       isOpen ? theme.buttonDark : theme.buttonLight};
     border-radius: 10px;

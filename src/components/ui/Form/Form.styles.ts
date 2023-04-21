@@ -4,34 +4,34 @@ import { theme } from '../../../styles/theme'
 
 export const FormStyled = styled.form`
   background: #2f2f2f;
-  padding: 2rem 0;
+  padding: ${theme.sizes.pxSize['mdlg']} 0;
 `
 export const FormHeaderContainer = styled.div`
   text-align: center;
-  margin: 1.5rem 0;
+  margin: ${theme.sizes.rem['mdsm']};
 `
 
 export const FormHeaderText = styled.span`
-  font: italic bold 1.5rem/1.5 'Roboto', sans-serif;
+  font: ${theme.defaultFont};
   text-align: center;
-  margin-top: 1rem;
+  margin-top: ${theme.sizes.rem['sm']};
 `
 
 export const FormSubHeaderText = styled.span`
-  font: bold 1rem/1.5 'Roboto', sans-serif;
+  font: ${theme.defaultFont};
   text-align: center;
 `
 
 export const FormGroup = styled.div`
   position: relative;
   width: 200px;
-  height: 2rem;
+  height: ${theme.sizes.rem['mdlg']};
   margin: 0 auto;
-  margin-bottom: 3rem;
+  margin-bottom: ${theme.sizes.rem['lg']};
 `
 
 export const FormLabel = styled.label`
-  font-size: 1rem;
+  font-size: ${theme.sizes.rem['sm']};
   padding: 0;
   width: ${theme.sizes.percentage['100']};
   height: ${theme.sizes.percentage['100']};

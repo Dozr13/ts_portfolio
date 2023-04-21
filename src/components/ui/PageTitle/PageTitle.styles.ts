@@ -6,25 +6,27 @@ export const PageTitleText = styled.p`
   position: absolute;
   top: 0;
   right: 0;
-  margin: 3rem 7rem;
+  margin: ${theme.sizes.rem['lg']};
   color: ${theme.primaryLight};
-  font: italic bold 3rem/1.5 'Roboto', sans-serif;
+  font: ${theme.defaultFont};
+  font-size: ${theme.sizes.rem['lg']};
 
   @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
-    margin: 2rem 2rem;
+    margin: ${theme.sizes.rem['mdlg']};
   }
 
   @media screen and (max-width: ${theme.pageSizes.tablet}) {
-    margin: 1.5rem 2rem;
+    margin: ${theme.sizes.rem['mdsm']};
+    ${theme.sizes.rem['mdlg']};
   }
 
   @media screen and (max-width: ${theme.pageSizes.mobile}) {
-    margin: 0 1rem;
+    margin: 0 ${theme.sizes.rem['sm']};
   }
 `
 
 export const TitleBox = styled.div`
   grid-area: title;
   justify-self: center;
-  margin-bottom: 2rem;
+  margin-bottom: ${theme.sizes.rem['mdlg']};
 `

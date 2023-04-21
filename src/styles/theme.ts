@@ -1,6 +1,7 @@
 export const theme = {
   // * Main colors
   primaryDark: '#303731',
+  primaryMid: '#A2B9C2',
   primaryLight: '#FAF9F6',
   primaryHover: '#343078',
 
@@ -13,7 +14,6 @@ export const theme = {
 
   sizes: {
     pxSize: {
-      // * px sizes
       zero: '0',
       xxs: '1px',
       xs: '2px',
@@ -26,8 +26,19 @@ export const theme = {
       xxl: '16px',
     },
 
+    rem: {
+      xxs: '0.25rem',
+      xs: '0.5rem',
+      sm: '1rem',
+      mdsm: '1.5rem',
+      md: '1.8rem',
+      mdlg: '2rem',
+      lg: '3rem',
+      xl: '5rem',
+      xxl: '7rem',
+    },
+
     percentage: {
-      0: '0%',
       10: '10%',
       20: '20%',
       30: '30%',
@@ -41,7 +52,6 @@ export const theme = {
     },
 
     viewHeight: {
-      0: '0vh',
       10: '10vh',
       20: '20vh',
       30: '30vh',
@@ -55,7 +65,6 @@ export const theme = {
     },
 
     viewWidth: {
-      0: '0vw',
       10: '10vw',
       20: '20vw',
       30: '30vw',
@@ -74,5 +83,6 @@ export const theme = {
     mobile: '425px',
     tablet: '768px',
     smallMonitor: '1024px',
+    largeMonitor: '1440px',
   },
 }

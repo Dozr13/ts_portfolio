@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+import { ReactComponent as Logo } from '../../assets/images/svg/logo-stamp.svg'
 import { theme } from '../../styles/theme'
 
 interface Props {
@@ -7,38 +8,72 @@ interface Props {
 }
 
 export const LandingContainer = styled.div`
-  height: ${theme.sizes.viewHeight['100']};
-  width: ${theme.sizes.viewWidth['100']};
-  background: ${theme.primaryDark};
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.2fr 1fr 0.5fr;
+  grid-template-rows: auto 1fr auto;
   grid-column-gap: 0px;
-  grid-row-gap: 50px;
-  grid-template-areas: 'title' 'logo' 'details';
-`
+  grid-row-gap: 0;
+  grid-template-areas:
+    'title'
+    'logo'
+    'details';
+  justify-items: center;
+  align-items: center;
+  background: ${theme.primaryDark};
 
-export const LandingHeader = styled.header`
-  position: absolute;
-  /* height: ${theme.sizes.percentage['0']}; */
-  width: ${theme.sizes.percentage['100']};
-  top: ${theme.sizes.pxSize['zero']};
-`
-
-export const LogoContainer = styled.div`
-  grid-area: logo;
-  width: ${theme.sizes.viewWidth['100']};
-  height: ${theme.sizes.percentage['50']};
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-  height: auto;
+  @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
+    height: ${theme.sizes.viewHeight['100']};
+  }
 
   @media screen and (max-width: ${theme.pageSizes.tablet}) {
   }
 
   @media screen and (max-width: ${theme.pageSizes.mobile}) {
   }
+`
+
+export const LogoContainer = styled.div`
+  grid-area: logo;
+  /* width: ${theme.sizes.viewWidth['80']}; */
+  /* height: ${theme.sizes.percentage['50']}; */
+  align-self: start;
+  justify-self: center;
+
+  @media screen and (max-width: ${theme.pageSizes.largeMonitor}) {
+    svg {
+      margin-top: ${theme.sizes.rem['lg']};
+      height: 60vh;
+    }
+  }
+
+  @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
+    svg {
+      margin-top: ${theme.sizes.rem['lg']};
+      height: 60vh;
+    }
+  }
+
+  @media screen and (max-width: ${theme.pageSizes.tablet}) {
+    svg {
+      height: 60vh;
+    }
+  }
+
+  @media screen and (max-width: ${theme.pageSizes.mobile}) {
+    margin-top: ${theme.sizes.rem['sm']};
+
+    svg {
+      width: 380px;
+      height: 380px;
+    }
+  }
+
+  // TODO: Add a query if max-width < ${theme.pageSizes.mobile}
+`
+
+export const LogoImage = styled(Logo)`
+  width: 100%;
+  height: 100%;
 `
 
 export const IntroContainer = styled.div`
@@ -46,32 +81,54 @@ export const IntroContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
-  /* height: ${theme.sizes.percentage['100']}; */
-  padding-bottom: 15rem;
+  padding-bottom: ${theme.sizes.pxSize['xl']};
+
+  @media screen and (max-width: ${theme.pageSizes.largeMonitor}) {
+  }
+
+  @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
+  }
+
+  @media screen and (max-width: ${theme.pageSizes.tablet}) {
+    font-size: ${theme.sizes.rem['mdlg']};
+  }
+
+  @media screen and (max-width: ${theme.pageSizes.mobile}) {
+    margin-top: 0;
+    font-size: ${theme.sizes.rem['sm']};
+  }
+`
+
+export const IntroText = styled.p`
+  font: ${theme.defaultFont};
+  font-size: ${theme.sizes.rem['lg']};
+  color: ${theme.primaryMid};
+  margin: 0;
+
+  @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
+    font-size: ${theme.sizes.rem['mdlg']};
+  }
 
   @media screen and (max-width: ${theme.pageSizes.tablet}) {
   }
 
   @media screen and (max-width: ${theme.pageSizes.mobile}) {
-    /* padding-bottom: 10rem; */
   }
-`
-
-export const IntroText = styled.p`
-  font-size: 2rem;
-  margin-bottom: 0;
-  flex: 1;
 `
 
 export const NameSignature = styled.p<Props>`
   font-family: 'Charm', cursive;
-  font-size: 3.5rem;
+  font-size: ${theme.sizes.rem['xl']};
   margin: 0;
   color: ${({ isOpen }) => (isOpen ? '#0D0C1D' : '#EFFFFA')};
-`
 
-export const TitleText = styled.p`
-  font-size: 1.3rem;
-  margin-top: 0;
+  @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
+    font-size: ${theme.sizes.rem['lg']};
+  }
+
+  @media screen and (max-width: ${theme.pageSizes.tablet}) {
+  }
+
+  @media screen and (max-width: ${theme.pageSizes.mobile}) {
+  }
 `

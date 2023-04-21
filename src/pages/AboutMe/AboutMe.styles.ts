@@ -4,64 +4,67 @@ import { theme } from '../../styles/theme'
 
 export const AboutMeContainer = styled.div`
   display: grid;
-  grid-template-columns: 0.9fr;
-  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
   grid-column-gap: 0px;
   grid-row-gap: 15px;
   grid-template-areas:
     'title'
     'photo'
     'info';
-  width: 100vw;
   position: relative;
   color: white;
   background: ${theme.primaryDark};
   align-items: end;
-  padding: 2.5rem 0;
-  justify-content: center;
+  padding: ${theme.sizes.pxSize['lg']} 0;
+  justify-items: center;
 
   @media screen and (max-width: ${theme.pageSizes.tablet}) {
-    grid-template-columns: 0.9fr;
+  }
+
+  @media screen and (max-width: ${theme.pageSizes.tablet}) {
   }
 
   @media screen and (max-width: ${theme.pageSizes.mobile}) {
-    grid-template-columns: 0.8fr;
   }
 `
 
 export const PhotoBox = styled.div`
   grid-area: photo;
   top: 0;
-  height: 200px;
-  width: auto;
+  height: ${theme.sizes.viewHeight['30']};
+  width: ${theme.sizes.viewWidth['70']};
   border-left: 2px solid black;
   border-bottom: 2px solid black;
   border-radius: ${theme.sizes.percentage['100']};
-  margin: 0 1rem;
+  margin: 0 ${theme.sizes.rem['sm']};
   z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 3rem;
+  margin: ${theme.sizes.rem['lg']} ${theme.sizes.pxSize['zero']};
 
   @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
-    height: 270px;
+    height: ${theme.sizes.viewHeight['40']};
+    width: ${theme.sizes.viewWidth['90']};
   }
 
   @media screen and (max-width: ${theme.pageSizes.tablet}) {
-    height: 250px;
+    height: ${theme.sizes.viewHeight['30']};
+    margin: ${theme.sizes.rem['mdlg']} ${theme.sizes.pxSize['zero']};
   }
 
   @media screen and (max-width: ${theme.pageSizes.mobile}) {
-    height: 220px;
+    height: ${theme.sizes.viewHeight['20']};
+    margin: ${theme.sizes.rem['sm']} ${theme.sizes.pxSize['zero']};
   }
 `
 
 export const ImageOfSelf = styled.img`
-  width: 100px;
-  height: 100px;
+  height: 250px;
+  width: 250px;
   border-radius: ${theme.sizes.percentage['30']};
-  margin-right: 1rem;
+  margin-right: ${theme.sizes.rem['sm']};
   height: auto;
 
   @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
@@ -79,24 +82,24 @@ export const ImageOfSelf = styled.img`
 
 export const InformationBox = styled.div`
   grid-area: info;
-  width: ${theme.sizes.percentage['80']};
-  background: gray;
+  width: ${theme.sizes.viewWidth['90']};
+  background: ${theme.primaryMid};
+  color: ${theme.primaryDark};
   border: 2px solid blue;
   text-align: center;
-  padding: 1rem;
+  padding: ${theme.sizes.rem['sm']};
   margin: 0 auto;
-  margin-top: 1rem;
+  margin-top: ${theme.sizes.rem['sm']};
   font: ${theme.defaultFont};
+  font-size: ${theme.sizes.rem['mdlg']};
 
   @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
-    font-size: 1.5rem;
+    font-size: ${theme.sizes.rem['md']};
   }
 
   @media screen and (max-width: ${theme.pageSizes.tablet}) {
-    font-size: 1.5rem;
   }
 
   @media screen and (max-width: ${theme.pageSizes.mobile}) {
-    font-size: 1.5rem;
   }
 `

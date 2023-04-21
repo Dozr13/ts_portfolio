@@ -7,9 +7,23 @@ interface Props {
 }
 
 export const StyledMenu = styled.nav<Props>`
-  position: fixed;
-  display: flex;
-  flex-direction: column;
+  position: inherit;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: auto auto;
+  grid-column-gap: 0px;
+  grid-row-gap: 0;
+  grid-template-areas:
+    'aboutMe'
+    'projects'
+    'contact'
+    'home'
+    'socialLinksBar';
+
+  list-style: none;
+  align-items: end;
+  justify-items: center;
   background: #f1f1f1;
   transform: ${({ isOpen }) =>
     isOpen ? 'translateX(0)' : 'translateX(-100%)'};
@@ -19,48 +33,44 @@ export const StyledMenu = styled.nav<Props>`
   transition: transform 0.3s ease-in-out;
   z-index: 10;
 
-  @media screen and (max-width: ${theme.pageSizes.tablet}) {
+  @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
     width: ${theme.sizes.percentage['50']};
+  }
+
+  @media screen and (max-width: ${theme.pageSizes.tablet}) {
+    width: ${theme.sizes.percentage['80']};
   }
 
   @media screen and (max-width: ${theme.pageSizes.mobile}) {
     width: ${theme.sizes.percentage['100']};
-    padding-top: 1rem;
   }
 
   a {
-    font-size: 2rem;
+    font: ${theme.defaultFont};
+    font-size: ${theme.sizes.rem['mdlg']};
     text-transform: uppercase;
-    padding: 3rem 0;
+    padding: ${theme.sizes.rem['lg']} 0;
     font-weight: bold;
-    letter-spacing: 0.5rem;
+    letter-spacing: ${theme.sizes.rem['xs']};
     color: #0d0c1d;
     text-decoration: none;
     transition: color 0.3s linear;
+    text-align: center;
     cursor: pointer;
 
+    @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
+    }
+
     @media screen and (max-width: ${theme.pageSizes.tablet}) {
-      font-size: 1.5rem;
-      text-align: center;
     }
 
     @media screen and (max-width: ${theme.pageSizes.mobile}) {
-      font-size: 1.5rem;
     }
 
     &:hover {
       color: #343078;
     }
   }
-`
-
-export const MenuListItemsContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: ${theme.sizes.percentage['70']};
-  justify-content: space-evenly;
-  list-style: none;
-  text-align: center;
 `
 
 export const MenuListItem = styled.li``

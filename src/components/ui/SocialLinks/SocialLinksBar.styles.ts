@@ -7,37 +7,65 @@ interface Props {
 }
 
 export const SocialLinksContainer = styled.div<Props>`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 3rem);
+  grid-template-rows: auto auto;
+  grid-gap: ${theme.sizes.rem['mdlg']};
+  grid-template-areas:
+    'text text text text'
+    'github twitter linkedIn resume';
   width: ${theme.sizes.percentage['100']};
+  align-items: end;
+  align-content: center;
+  justify-content: center;
   background: ${props => props.backgroundColor};
+
+  @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
+  }
+
+  @media screen and (max-width: ${theme.pageSizes.tablet}) {
+  }
+
+  @media screen and (max-width: ${theme.pageSizes.mobile}) {
+  }
 `
 
 export const SocialLinksHeader = styled.p`
+  grid-area: text;
+  justify-self: center;
   font-weight: bold;
-  font-size: 1.3rem;
-  margin-bottom: 0;
-`
+  font-size: ${theme.sizes.rem['mdlg']};
+  margin: 0;
 
-export const SocialLinksBarWrapper = styled.div`
-  display: flex;
-  justify-content: space-around;
-  width: ${theme.sizes.percentage['100']};
-  padding: 1rem;
-  border-radius: 0.5rem;
+  @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
+  }
+
+  @media screen and (max-width: ${theme.pageSizes.tablet}) {
+  }
+
+  @media screen and (max-width: ${theme.pageSizes.mobile}) {
+  }
 `
 
 export const SocialLink = styled.a`
   svg {
-    height: 3rem;
-    width: 3rem;
+    height: ${theme.sizes.rem['lg']};
+    width: ${theme.sizes.rem['lg']};
   }
 `
 
-export const SocialLinksPageBox = styled.div`
-  width: ${theme.sizes.percentage['100']};
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+export const GithubLink = styled.div`
+  grid-area: github;
+`
+
+export const TwitterLink = styled.div`
+  grid-area: twitter;
+`
+
+export const LinkedInLink = styled.div`
+  grid-area: linkedIn;
+`
+
+export const ResumeLink = styled.div`
+  grid-area: resume;
 `
