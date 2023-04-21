@@ -14,7 +14,7 @@ export const AboutMeContainer = styled.div`
     'info';
   position: relative;
   color: white;
-  background: ${theme.primaryDark};
+  background: ${theme.colors.primaryDark};
   align-items: end;
   padding: ${theme.sizes.pxSize['lg']} 0;
   justify-items: center;
@@ -83,8 +83,8 @@ export const ImageOfSelf = styled.img`
 export const InformationBox = styled.div`
   grid-area: info;
   width: ${theme.sizes.viewWidth['90']};
-  background: ${theme.primaryMid};
-  color: ${theme.primaryDark};
+  background: ${theme.colors.primaryMid};
+  color: ${theme.colors.primaryDark};
   border: 2px solid blue;
   text-align: center;
   padding: ${theme.sizes.rem['sm']};

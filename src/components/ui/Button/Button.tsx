@@ -3,12 +3,13 @@ import React from 'react'
 import { StyledButton } from './Button.styles'
 
 interface Props {
-  title: string
+  title: string;
+  type?: "button" | "submit" | "reset" | undefined;
 }
 
-const Button = ({ title }: Props) => {
+const Button = ({ title, type }: Props) => {
   return (
-    <StyledButton>{title}</StyledButton>
+    <StyledButton type={type}>{title}</StyledButton>
   )
 }
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState } from 'react'
 
 type Props = {
   initialValue: string
@@ -6,6 +6,10 @@ type Props = {
 
 const useInput = ({ initialValue }: Props) => {
   const [value, setValue] = useState<string>(initialValue)
+
+  const reset = () => {
+    setValue(initialValue)
+  }
 
   const onChange = (event: {
     target: { value: React.SetStateAction<string> }
@@ -16,6 +20,7 @@ const useInput = ({ initialValue }: Props) => {
   return {
     value,
     onChange,
+    reset,
   }
 }
 

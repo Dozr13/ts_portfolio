@@ -6,6 +6,6 @@ export const ContactContainer = styled.div`
   width: ${theme.sizes.percentage['100']};
   position: relative;
   color: white;
-  background: ${theme.primaryDark};
+  background: ${theme.colors.primaryDark};
   padding-bottom: ${theme.sizes.rem['lg']};
 `

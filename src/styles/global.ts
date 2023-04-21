@@ -12,8 +12,8 @@ export const GlobalStyles = createGlobalStyle`
   }
   body {
     align-items: center;
-    background: ${theme.primaryDark};
-    color: ${theme.primaryLight};
+    background: ${theme.colors.primaryDark};
+    color: ${theme.colors.primaryLight};
     display: flex;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     height: ${theme.sizes.viewHeight['100']};

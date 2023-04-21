@@ -12,7 +12,7 @@ export const ProjectsContainer = styled.div`
   width: ${theme.sizes.percentage['100']};
   position: relative;
   color: white;
-  background: ${theme.primaryDark};
+  background: ${theme.colors.primaryDark};
   align-items: end;
   padding: ${theme.sizes.pxSize['xl']} 0;
   grid-template-areas: 'title' 'info' 'image1' 'image2' 'image3';

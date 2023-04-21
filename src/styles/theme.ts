@@ -1,13 +1,15 @@
 export const theme = {
-  // * Main colors
-  primaryDark: '#303731',
-  primaryMid: '#A2B9C2',
-  primaryLight: '#FAF9F6',
-  primaryHover: '#343078',
+  colors: {
+    // * Main colors
+    primaryDark: '#303731',
+    primaryMid: '#A2B9C2',
+    primaryLight: '#FAF9F6',
+    primaryHover: '#343078',
 
-  // * Miscellaneous colors
-  buttonDark: '#0D0C1D',
-  buttonLight: '#EFFFFA',
+    // * Miscellaneous colors
+    buttonDark: '#0D0C1D',
+    buttonLight: '#EFFFFA',
+  },
 
   // * Fonts
   defaultFont: 'bold 1rem/1.5 Roboto, sans-serif',

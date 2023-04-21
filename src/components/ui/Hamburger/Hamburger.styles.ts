@@ -35,7 +35,7 @@ export const StyledBurger = styled.button<Props>`
     width: ${theme.sizes.rem['mdlg']};
     height: ${theme.sizes.rem['xxs']};
     background: ${({ isOpen }) =>
-      isOpen ? theme.buttonDark : theme.buttonLight};
+      isOpen ? theme.colors.buttonDark : theme.colors.buttonLight};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;

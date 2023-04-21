@@ -9,7 +9,6 @@ interface Props {
 }
 
 const SideMenu = ({ isOpen, handleMenuItemClick }: Props) => {
-  console.log(isOpen)
   return (
     <StyledMenu isOpen={isOpen}>
       <MenuListItem grid-area='aboutMe'>
@@ -38,6 +37,6 @@ const SideMenu = ({ isOpen, handleMenuItemClick }: Props) => {
       </MenuListItem>
       <SocialLinksBar backgroundColor='#8d918d' grid-area='socialLinksBar' />
     </StyledMenu>
-  )
-}
+  );
+};
 export default SideMenu;

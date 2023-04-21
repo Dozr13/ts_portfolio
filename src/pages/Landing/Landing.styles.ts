@@ -19,7 +19,7 @@ export const LandingContainer = styled.div`
     'details';
   justify-items: center;
   align-items: center;
-  background: ${theme.primaryDark};
+  background: ${theme.colors.primaryDark};
 
   @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
     height: ${theme.sizes.viewHeight['100']};
@@ -102,7 +102,7 @@ export const IntroContainer = styled.div`
 export const IntroText = styled.p`
   font: ${theme.defaultFont};
   font-size: ${theme.sizes.rem['lg']};
-  color: ${theme.primaryMid};
+  color: ${theme.colors.primaryMid};
   margin: 0;
 
   @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
