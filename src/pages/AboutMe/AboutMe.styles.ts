@@ -62,9 +62,13 @@ export const PhotoBox = styled.div`
 `
 
 export const ImageOfSelf = styled.img`
-  width: ${theme.sizes.viewWidth['20']};
+  width: ${theme.sizes.viewHeight['30']};
   border-radius: ${theme.sizes.percentage['30']};
   margin-right: ${theme.sizes.rem['sm']};
+
+  @media screen and (max-width: ${theme.pageSizes.largeMonitor}) {
+    width: ${theme.sizes.viewWidth['20']};
+  }
 
   @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
     width: ${theme.sizes.viewWidth['30']};
