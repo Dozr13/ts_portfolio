@@ -59,17 +59,17 @@ const Form = () => {
 
       <FormGroup grid-area='nameInput'>
         <FormLabel>Name *</FormLabel>
-        <FormInput type='text' required {...nameInput} />
+        <FormInput name='name' type='text' required {...nameInput} />
       </FormGroup>
 
       <FormGroup grid-area='emailInput'>
         <FormLabel>Email *</FormLabel>
-        <FormInput type='email' required {...emailInput} />
+        <FormInput name='email' type='email' required {...emailInput} />
       </FormGroup>
 
       <FormFlexGroup>
         <FormLabel>Message *</FormLabel>
-        <FormTextArea ref={textAreaRef} required {...messageInput} rows={1} />
+        <FormTextArea name='message' ref={textAreaRef} required {...messageInput} rows={1} />
         <Button title='Send Message' type='submit' />
       </FormFlexGroup>
     </FormStyled>
