@@ -32,6 +32,7 @@ export const theme = {
       xxs: '0.25rem',
       xs: '0.5rem',
       sm: '1rem',
+      ssm: '1.3rem',
       mdsm: '1.5rem',
       md: '1.8rem',
       mdlg: '2rem',

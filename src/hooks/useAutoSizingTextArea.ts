@@ -1,18 +1,16 @@
-// * May implement later
-// import { useEffect } from 'react'
+import { useEffect } from 'react'
 
-// const useAutosizeTextArea = (
-//   textAreaRef: HTMLTextAreaElement | null,
-//   value: string
-// ) => {
-//   useEffect(() => {
-//     if (textAreaRef) {
-//       textAreaRef.style.height = '0px'
-//       const scrollHeight = textAreaRef.scrollHeight
+const useAutosizeTextArea = (
+  textAreaElement: HTMLTextAreaElement | null,
+  text: string
+) => {
+  useEffect(() => {
+    const element = textAreaElement
+    if (element) {
+      element.style.height = 'inherit'
+      element.style.height = `${element.scrollHeight}px`
+    }
+  }, [text, textAreaElement])
+}
 
-//       textAreaRef.style.height = scrollHeight + 'px'
-//     }
-//   }, [textAreaRef, value])
-// }
-
-// export default useAutosizeTextArea
+export default useAutosizeTextArea
