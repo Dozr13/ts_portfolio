@@ -83,6 +83,7 @@ export const theme = {
 
   pageSizes: {
     // * Page sized
+    mobileMini: '395px',
     mobile: '425px',
     tablet: '768px',
     smallMonitor: '1024px',

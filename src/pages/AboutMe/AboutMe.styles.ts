@@ -56,27 +56,30 @@ export const PhotoBox = styled.div`
 
   @media screen and (max-width: ${theme.pageSizes.mobile}) {
     height: ${theme.sizes.viewHeight['20']};
-    margin: ${theme.sizes.rem['sm']} ${theme.sizes.pxSize['zero']};
+    margin: ${theme.sizes.viewHeight['10']} ${theme.sizes.pxSize['zero']}
+      ${theme.sizes.rem['md']} ${theme.sizes.pxSize['zero']};
   }
 `
 
 export const ImageOfSelf = styled.img`
-  height: 250px;
-  width: 250px;
+  width: ${theme.sizes.viewWidth['20']};
   border-radius: ${theme.sizes.percentage['30']};
   margin-right: ${theme.sizes.rem['sm']};
-  height: auto;
 
   @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
-    width: 250px;
+    width: ${theme.sizes.viewWidth['30']};
   }
 
   @media screen and (max-width: ${theme.pageSizes.tablet}) {
-    width: 230px;
+    width: ${theme.sizes.viewWidth['40']};
   }
 
   @media screen and (max-width: ${theme.pageSizes.mobile}) {
-    width: 200px;
+    width: ${theme.sizes.viewWidth['50']};
+  }
+
+  @media screen and (max-width: ${theme.pageSizes.mobileMini}) {
+    width: ${theme.sizes.viewWidth['50']};
   }
 `
 
@@ -101,5 +104,9 @@ export const InformationBox = styled.div`
   }
 
   @media screen and (max-width: ${theme.pageSizes.mobile}) {
+  }
+
+  @media screen and (max-width: ${theme.pageSizes.mobileMini}) {
+    width: ${theme.sizes.viewWidth['70']};
   }
 `

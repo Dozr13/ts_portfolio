@@ -23,6 +23,10 @@ export const ProjectImage = styled.img`
   border: 1px double #fff;
   width: ${theme.sizes.percentage['100']};
   margin-top: ${theme.sizes.rem['mdlg']};
+
+  @media screen and (max-width: ${theme.pageSizes.mobileMini}) {
+    margin-top: ${theme.sizes.rem['xxs']};
+  }
 `
 
 export const ProjectTitle = styled.p`
@@ -41,6 +45,9 @@ export const ProjectTitle = styled.p`
 
   @media screen and (max-width: ${theme.pageSizes.mobile}) {
     font-size: ${theme.sizes.rem['mdsm']};
+  }
+
+  @media screen and (max-width: ${theme.pageSizes.mobileMini}) {
   }
 `
 

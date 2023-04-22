@@ -23,6 +23,11 @@ export const PageTitleText = styled.p`
   @media screen and (max-width: ${theme.pageSizes.mobile}) {
     margin: 0 ${theme.sizes.rem['sm']};
   }
+
+  @media screen and (max-width: ${theme.pageSizes.mobileMini}) {
+    font-size: ${theme.sizes.rem['mdlg']};
+    margin: ${theme.sizes.rem['xs']} ${theme.sizes.rem['sm']};
+  }
 `
 
 export const TitleBox = styled.div`

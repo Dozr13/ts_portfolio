@@ -10,19 +10,19 @@ interface Props {
 export const LandingContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto 1fr 0.5fr;
   grid-column-gap: 0px;
   grid-row-gap: 0;
   grid-template-areas:
     'title'
     'logo'
     'details';
-  justify-items: center;
+  justify-content: center;
   align-items: center;
   background: ${theme.colors.primaryDark};
+  /* height: ${theme.sizes.viewHeight['100']}; */
 
   @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
-    height: ${theme.sizes.viewHeight['100']};
   }
 
   @media screen and (max-width: ${theme.pageSizes.tablet}) {
@@ -30,32 +30,34 @@ export const LandingContainer = styled.div`
 
   @media screen and (max-width: ${theme.pageSizes.mobile}) {
   }
+
+  @media screen and (max-width: ${theme.pageSizes.mobileMini}) {
+  }
 `
 
 export const LogoContainer = styled.div`
   grid-area: logo;
-  /* width: ${theme.sizes.viewWidth['80']}; */
-  /* height: ${theme.sizes.percentage['50']}; */
   align-self: start;
   justify-self: center;
 
   @media screen and (max-width: ${theme.pageSizes.largeMonitor}) {
     svg {
-      margin-top: ${theme.sizes.rem['lg']};
-      height: 60vh;
+      margin-top: ${theme.sizes.viewHeight['10']};
+      height: ${theme.sizes.viewHeight['50']};
     }
   }
 
   @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
     svg {
       margin-top: ${theme.sizes.rem['lg']};
-      height: 60vh;
+      height: ${theme.sizes.viewHeight['60']};
     }
   }
 
   @media screen and (max-width: ${theme.pageSizes.tablet}) {
     svg {
-      height: 60vh;
+      margin-top: ${theme.sizes.viewHeight['10']};
+      height: ${theme.sizes.viewHeight['60']};
     }
   }
 
@@ -63,12 +65,16 @@ export const LogoContainer = styled.div`
     margin-top: ${theme.sizes.rem['sm']};
 
     svg {
-      width: 380px;
-      height: 380px;
+      height: ${theme.sizes.viewHeight['40']};
     }
   }
 
-  // TODO: Add a query if max-width < ${theme.pageSizes.mobile}
+  @media screen and (max-width: ${theme.pageSizes.mobileMini}) {
+    margin-top: ${theme.sizes.rem['mdlg']};
+    svg {
+      height: ${theme.sizes.viewHeight['40']};
+    }
+  }
 `
 
 export const LogoImage = styled(Logo)`
@@ -94,8 +100,12 @@ export const IntroContainer = styled.div`
   }
 
   @media screen and (max-width: ${theme.pageSizes.mobile}) {
-    margin-top: 0;
     font-size: ${theme.sizes.rem['sm']};
+    padding-bottom: ${theme.sizes.viewHeight['10']};
+  }
+
+  @media screen and (max-width: ${theme.pageSizes.mobileMini}) {
+    padding-bottom: ${theme.sizes.rem['xxl']};
   }
 `
 
@@ -113,6 +123,10 @@ export const IntroText = styled.p`
   }
 
   @media screen and (max-width: ${theme.pageSizes.mobile}) {
+  }
+
+  @media screen and (max-width: ${theme.pageSizes.mobileMini}) {
+    font-size: ${theme.sizes.rem['mdsm']};
   }
 `
 

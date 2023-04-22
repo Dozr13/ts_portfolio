@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-import { AboutMeContainer, ImageOfSelf, InformationBox, PhotoBox } from './AboutMe.styles'
-import myImage from "../../assets/images/myImage.jpg"
-import PageTitle from '../../components/ui/PageTitle/PageTitle'
-import { TitleBox } from '../../components/ui/PageTitle/PageTitle.styles'
+import { AboutMeContainer, ImageOfSelf, InformationBox, PhotoBox } from './AboutMe.styles';
+import myImage from "../../assets/images/myImage.jpg";
+import PageTitle from '../../components/ui/PageTitle/PageTitle';
+import { TitleBox } from '../../components/ui/PageTitle/PageTitle.styles';
 
 const AboutMe = () => {
   return (
@@ -33,7 +33,7 @@ const AboutMe = () => {
         Let's connect and explore how we can collaborate to create something amazing!
       </InformationBox>
     </AboutMeContainer >
-  )
-}
+  );
+};
 
-export default AboutMe
+export default AboutMe;

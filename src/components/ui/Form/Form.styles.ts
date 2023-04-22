@@ -17,22 +17,35 @@ export const FormHeaderContainer = styled.div`
 
 export const FormHeaderText = styled.span`
   font: ${theme.defaultFont};
-  font-size: ${theme.sizes.rem['md']};
+  font-size: ${theme.sizes.rem['mdlg']};
   text-align: center;
   margin-top: ${theme.sizes.rem['sm']};
+
+  @media screen and (max-width: ${theme.pageSizes.mobile}) {
+    font-size: ${theme.sizes.rem['md']};
+  }
 `
 
 export const FormSubHeaderText = styled.span`
   font: ${theme.defaultFont};
+  font-size: ${theme.sizes.rem['mdsm']};
   text-align: center;
+
+  @media screen and (max-width: ${theme.pageSizes.mobile}) {
+    font-size: ${theme.sizes.rem['sm']};
+  }
 `
 
 export const FormGroup = styled.div`
   position: relative;
-  width: 200px;
+  width: ${theme.sizes.viewWidth['50']};
   height: ${theme.sizes.rem['mdlg']};
   margin: 0 auto;
   margin-bottom: ${theme.sizes.rem['lg']};
+
+  @media screen and (max-width: ${theme.pageSizes.mobile}) {
+    width: ${theme.sizes.viewWidth['80']};
+  }
 `
 
 export const FormLabel = styled.label`
@@ -72,4 +85,5 @@ export const FormTextArea = styled.textarea`
   resize: none;
   transition: border-color 150ms ease;
   width: ${theme.sizes.percentage['100']};
+  margin-bottom: ${theme.sizes.rem['mdlg']};
 `
