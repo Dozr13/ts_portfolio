@@ -119,7 +119,7 @@ export const SkillList = styled.ul`
   columns: 2;
   -webkit-columns: 2;
   -moz-columns: 2;
-  width: ${theme.sizes.percentage['70']};
+  width: ${theme.sizes.percentage['50']};
   text-align: center;
   margin: ${theme.sizes.rem['md']} auto;
   list-style: none;
