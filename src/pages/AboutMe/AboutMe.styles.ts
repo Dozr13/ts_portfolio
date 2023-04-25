@@ -114,3 +114,38 @@ export const InformationBox = styled.div`
     width: ${theme.sizes.viewWidth['70']};
   }
 `
+
+export const SkillList = styled.ul`
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  width: ${theme.sizes.percentage['70']};
+  text-align: center;
+  margin: ${theme.sizes.rem['md']} auto;
+  list-style: none;
+  padding: 0;
+
+  @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
+    font-size: ${theme.sizes.rem['mdlg']};
+    width: ${theme.sizes.percentage['60']};
+  }
+
+  @media screen and (max-width: ${theme.pageSizes.tablet}) {
+    font-size: ${theme.sizes.rem['mdsm']};
+    width: ${theme.sizes.percentage['100']};
+  }
+
+  @media screen and (max-width: ${theme.pageSizes.mobile}) {
+    font-size: ${theme.sizes.rem['mdsm']};
+    width: ${theme.sizes.percentage['100']};
+  }
+
+  @media screen and (max-width: ${theme.pageSizes.mobileMini}) {
+    columns: 1;
+    width: ${theme.sizes.percentage['100']};
+  }
+`
+
+export const SkillListItem = styled.li`
+  width: ${theme.sizes.percentage['100']};
+`

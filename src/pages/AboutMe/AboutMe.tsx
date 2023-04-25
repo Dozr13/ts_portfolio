@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { AboutMeContainer, ImageOfSelf, InformationBox, PhotoBox } from './AboutMe.styles';
-import myImage from "../../assets/images/myImage.jpg";
+import { AboutMeContainer, ImageOfSelf, InformationBox, PhotoBox, SkillList, SkillListItem } from './AboutMe.styles';
+import myImage from "../../assets/images/jpg/myImage.jpg";
 import PageTitle from '../../components/ui/PageTitle/PageTitle';
 import { TitleBox } from '../../components/ui/PageTitle/PageTitle.styles';
 
@@ -17,20 +17,31 @@ const AboutMe = () => {
       <InformationBox>
         <strong>Welcome to my portfolio!</strong>
         <hr />
-        <strong>Hi</strong>, <strong>I'm Wade</strong>,
+        <strong>Hello, my name is Wade,</strong>
         <br />
-        a seasoned software developer with a decade of experience in the oil and gas industry, having worked with top-tier companies such as HP and PlexTrac. I have a strong passion for code and enjoy the process of bringing ideas to life.
-        <br />
-        <br />
-        My strength as a developer lies in my ability to solve complex problems with a tenacious mindset. <br /> I'm dedicated to delivering high-quality code that exceeds customer expectations, and I thrive on challenging projects that push my skills to the next level.
+        and I'm a skilled software developer with over a decade of experience in the oil and gas industry. I've transitioned my career by attending DevMountain coding boot camp at the Web Development program remotely, which equipped me with the latest web development skills and best practices.
         <br />
         <br />
-        Throughout my career, I've developed an extensive skillset in technologies such as React, Typescript, Node, PostgreSQL, Mongo, C#, ASP .NET, Linux, and JavaScript. I've worked on a variety of projects, ranging from web applications to complex data systems, and I have a proven track record of success.
+        Currently, I work with In Time Tec, a company that partners with top-tier clients such as HP and PlexTrac. With my strong passion for coding and a tenacious mindset, I'm always ready to tackle complex problems and deliver high-quality code that exceeds customer expectations. My track record of success demonstrates my ability to handle challenging projects and take my skills to the next level.
         <br />
         <br />
-        If you're seeking a developer who is driven, passionate, and skilled, then look no further. I'm excited to bring my expertise to your team and help you achieve your business objectives.
+        I have extensive experience with various technologies such as
+        <SkillList>
+          <SkillListItem>React</SkillListItem>
+          <SkillListItem>JavaScript</SkillListItem>
+          <SkillListItem>Typescript</SkillListItem>
+          <SkillListItem>Node</SkillListItem>
+          <SkillListItem>PostgreSQL</SkillListItem>
+          <SkillListItem>MongoDB</SkillListItem>
+          <SkillListItem>C#</SkillListItem>
+          <SkillListItem>WPF</SkillListItem>
+          <SkillListItem>Linux</SkillListItem>
+          <SkillListItem>ASP .NET</SkillListItem>
+        </SkillList>
+        I've worked on diverse projects ranging from web applications to complex data systems.
         <br />
-        Let's connect and explore how we can collaborate to create something amazing!
+        <br />
+        I'm committed to ongoing professional growth and continuously seek ways to improve my skills and knowledge. If you're looking for a driven, passionate, and skilled developer to join your team, I'm the one you're searching for. Let's collaborate and create something amazing that helps your business achieve its objectives. Please don't hesitate to contact me to discuss your project further.
       </InformationBox>
     </AboutMeContainer >
   );

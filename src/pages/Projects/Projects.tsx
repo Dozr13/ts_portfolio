@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-import { ProjectsContainer, ProjectImage, ProjectTitle, ProjectBox, ProjectLink } from './Projects.styles'
-import billTrax from '../../assets/images/billTrax.png'
-import gitReactComponents from '../../assets/images/gitReactComponents.png'
-import loremCakes from '../../assets/images/loremCakes.png'
-import PageTitle from '../../components/ui/PageTitle/PageTitle'
-import { TitleBox } from '../../components/ui/PageTitle/PageTitle.styles'
+import { ProjectsContainer, ProjectImage, ProjectTitle, ProjectBox, ProjectLink } from './Projects.styles';
+import billTrax from '../../assets/images/png/billTrax.png';
+import gitReactComponents from '../../assets/images/png/gitReactComponents.png';
+import loremCakes from '../../assets/images/png/loremCakes.png';
+import PageTitle from '../../components/ui/PageTitle/PageTitle';
+import { TitleBox } from '../../components/ui/PageTitle/PageTitle.styles';
 
 const Projects = () => {
   return (
@@ -32,7 +32,7 @@ const Projects = () => {
         </ProjectLink>
       </ProjectBox>
     </ProjectsContainer>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;
