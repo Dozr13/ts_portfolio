@@ -1,0 +1,9 @@
+# Ignore all files in the "build" directory
+build/**
+
+# Ignore specific file types
+*.log
+*.md
+
+# Ignore third-party libraries
+node_modules/**
