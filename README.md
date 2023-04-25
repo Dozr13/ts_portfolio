@@ -1,46 +1,71 @@
-# Getting Started with Create React App
+# My Personal Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my personal portfolio website! This website is designed to showcase my skills, projects, and experience to potential employers and clients. You can view the live website [here](https://wadepate.com/).
 
-## Available Scripts
+## Technologies Used
 
-In the project directory, you can run:
+---
 
-### `npm start`
+This website was built using the following technologies:
 
-Runs the app in the development mode.\
-Open [http://localhost:3456](http://localhost:3456) to view it in the browser.
+- React
+- TypeScript
+- emailjs-com
+- react-icons
+- styled-components
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Features
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This website includes the following features:
 
-### `npm run build`
+- Home page with a logo I created using Adobe Photoshop
+- Popout Sidebar with links to my resume and social media profiles
+- About page with an image of me and an introduction containing more details about my experience, education, and skills
+- Projects page with a small gallery of my past projects, descriptions, and links to the live websites or code repositories
+- Contact page with a form to send me a message directly
+- Responsive design for mobile and desktop screens
+- Serverless contact form using emailjs
+- Custom domain using [Google Domains](https://domains.google.com/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation and Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If you want to run this website locally, you can follow these steps:
 
-### `npm run eject`
+Clone this repository to your local machine using git clone <https://github.com/yourusername/your-repo-name.git>
+Install the dependencies using npm install
+Start the development server using npm start
+Open <http://localhost:3000> in your web browser to view the website
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Contributing
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- If you find any bugs or have suggestions for improvements, feel free to submit an issue or a pull request.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## License
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- This project is licensed under the Creative Commons Attribution-ShareAlike (CC BY-SA) License - see the LICENSE.md file for details.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Acknowledgments
+
+---
+
+I would like to thank the following technologies for making this project possible:
+
+- [React](https://react.dev/) - A JavaScript library for building user interfaces. React allowed me to easily create reusable components and manage the state of the application.
+
+- [TypeScript](https://www.typescriptlang.org/) - A statically typed superset of JavaScript that adds type annotations and other features to the language. TypeScript helped me catch errors early and write more maintainable code.
+
+- [emailjs-com](https://www.emailjs.com/) - A service that allows you to send email directly from JavaScript code. emailjs-com made it easy for me to create a contact form that sends messages directly to my email inbox.
+
+- [react-icons](https://react-icons.github.io/react-icons/) - A library of icons for React applications. react-icons provided a wide variety of icons that I could easily use in my application without having to create them from scratch.
+
+- [styled-components](https://styled-components.com/) - A library for styling React components using CSS-in-JS syntax. styled-components allowed me to write CSS directly in my JavaScript code, which made it easy to manage styles and avoid naming collisions.
+
+Without these technologies, this project would not have been possible. I am grateful for the contributions of the developers who created and maintain these libraries, and for the open-source community that supports them.
