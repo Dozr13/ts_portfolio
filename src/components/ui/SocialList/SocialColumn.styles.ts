@@ -2,11 +2,7 @@ import styled from 'styled-components'
 
 import { theme } from '../../../styles/theme'
 
-interface Props {
-  backgroundColor: string
-}
-
-export const SocialListContainer = styled.div<Props>`
+export const SocialListColumnContainer = styled.div`
   display: grid;
   grid-template-columns: 1;
   grid-template-rows: repeat(5, ${theme.sizes.percentage['10']});
@@ -21,14 +17,25 @@ export const SocialListContainer = styled.div<Props>`
   align-items: center;
   align-content: center;
   justify-content: center;
+  background: ${theme.colors.transparent};
+`
 
-  @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
-  }
+export const SocialListRowContainer = styled.div`
+  width: ${theme.sizes.percentage['100']};
+  display: grid;
+  grid-template-columns: repeat(5, ${theme.sizes.percentage['20']});
+  grid-template-rows: repeat(2, ${theme.sizes.percentage['20']});
+  grid-row-gap: ${theme.sizes.rem['lg']};
+  grid-template-areas:
+    'text text text text text'
+    'github linkedIn instagram twitter resume';
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background: ${theme.colors.secondaryMid};
 
-  @media screen and (max-width: ${theme.pageSizes.tablet}) {
-  }
-
-  @media screen and (max-width: ${theme.pageSizes.mobile}) {
+  > * {
+    margin: 0 auto;
   }
 `
 

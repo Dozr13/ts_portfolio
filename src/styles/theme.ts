@@ -6,6 +6,10 @@ export const theme = {
     primaryLight: '#FAF9F6',
     primaryHover: '#343078',
 
+    // * Secondary colors
+    secondaryMid: '#8d918d',
+    transparent: 'transparent',
+
     // * Miscellaneous colors
     buttonDark: '#0D0C1D',
     buttonLight: '#EFFFFA',

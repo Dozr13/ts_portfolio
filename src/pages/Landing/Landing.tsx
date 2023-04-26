@@ -3,13 +3,14 @@ import React from 'react';
 import { IntroContainer, IntroText, LandingContainer, LandingSocialLinksContainer, LogoContainer, LogoImage, NameSignature } from './Landing.styles';
 import PageTitle from '../../components/ui/PageTitle/PageTitle';
 import { TitleBox } from '../../components/ui/PageTitle/PageTitle.styles';
-import SocialColumnList from '../../components/ui/SocialList/SocialColumnList';
+import SocialListColumn from '../../components/ui/SocialList/SocialListColumn';
 
 interface Props {
   isOpen: boolean;
 }
 
 const Landing = ({ isOpen }: Props) => {
+  console.log(isOpen);
   return (
     <LandingContainer id="home">
       <TitleBox>
@@ -23,9 +24,11 @@ const Landing = ({ isOpen }: Props) => {
         <NameSignature isOpen={isOpen}>Wade Pate</NameSignature>
         <IntroText>Full-stack Developer</IntroText>
       </IntroContainer>
-      <LandingSocialLinksContainer>
-        <SocialColumnList backgroundColor='#8d918d' grid-area='socialLinksBar' />
-      </LandingSocialLinksContainer>
+      {
+        !isOpen && <LandingSocialLinksContainer>
+          <SocialListColumn />
+        </LandingSocialLinksContainer>
+      }
     </LandingContainer>
   );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { MenuLink, MenuListItem, StyledMenu } from './SideMenu.styles';
-import SocialLinksBar from '../SocialLinks/SocialLinksBar';
+import SocialListRow from '../SocialList/SocialListRow';
 
 interface Props {
   isOpen: boolean;
@@ -35,7 +35,7 @@ const SideMenu = ({ isOpen, handleMenuItemClick }: Props) => {
           Back to top
         </MenuLink>
       </MenuListItem>
-      <SocialLinksBar backgroundColor='#8d918d' grid-area='socialLinksBar' />
+      <SocialListRow header='Find me at:' grid-area='socialLinksBar' />
     </StyledMenu>
   );
 };

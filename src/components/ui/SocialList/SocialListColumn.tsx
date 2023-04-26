@@ -2,17 +2,11 @@ import React from "react";
 
 import { RiFileList3Line, RiGithubLine, RiInstagramLine, RiLinkedinLine, RiTwitterLine } from 'react-icons/ri';
 
-import { GithubLink, InstagramLink, LinkedInLink, ResumeLink, SocialLink, SocialListContainer, SocialLinksHeader, TwitterLink } from "./SocialColumnList.styles";
+import { GithubLink, InstagramLink, LinkedInLink, ResumeLink, SocialLink, SocialListColumnContainer, TwitterLink } from "./SocialColumn.styles";
 
-interface Props {
-  backgroundColor: string;
-  header?: string;
-}
-
-const SocialList = ({ backgroundColor, header }: Props) => {
+const SocialListColumn = () => {
   return (
-    <SocialListContainer backgroundColor={backgroundColor}>
-      <SocialLinksHeader>{header}</SocialLinksHeader>
+    <SocialListColumnContainer>
       <GithubLink>
         <SocialLink target="_blank" href="https://github.com/Dozr13" >
           <RiGithubLine style={{ color: '#000' }} />
@@ -38,8 +32,8 @@ const SocialList = ({ backgroundColor, header }: Props) => {
           <RiFileList3Line style={{ color: '#FFF' }} grid-area='resume' />
         </SocialLink>
       </ResumeLink>
-    </SocialListContainer>
+    </SocialListColumnContainer>
   );
 };
 
-export default SocialList;
+export default SocialListColumn;
