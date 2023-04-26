@@ -3,7 +3,7 @@ import React from 'react';
 import { IntroContainer, IntroText, LandingContainer, LandingSocialLinksContainer, LogoContainer, LogoImage, NameSignature } from './Landing.styles';
 import PageTitle from '../../components/ui/PageTitle/PageTitle';
 import { TitleBox } from '../../components/ui/PageTitle/PageTitle.styles';
-import SocialList from '../../components/ui/SocialList/SocialList';
+import SocialColumnList from '../../components/ui/SocialList/SocialColumnList';
 
 interface Props {
   isOpen: boolean;
@@ -24,7 +24,7 @@ const Landing = ({ isOpen }: Props) => {
         <IntroText>Full-stack Developer</IntroText>
       </IntroContainer>
       <LandingSocialLinksContainer>
-        <SocialList backgroundColor='#8d918d' grid-area='socialLinksBar' />
+        <SocialColumnList backgroundColor='#8d918d' grid-area='socialLinksBar' />
       </LandingSocialLinksContainer>
     </LandingContainer>
   );

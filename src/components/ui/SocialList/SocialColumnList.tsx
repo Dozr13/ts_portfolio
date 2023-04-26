@@ -2,7 +2,7 @@ import React from "react";
 
 import { RiFileList3Line, RiGithubLine, RiInstagramLine, RiLinkedinLine, RiTwitterLine } from 'react-icons/ri';
 
-import { GithubLink, InstagramLink, LinkedInLink, ResumeLink, SocialLink, SocialListContainer, SocialLinksHeader, TwitterLink } from "./SocialList.styles";
+import { GithubLink, InstagramLink, LinkedInLink, ResumeLink, SocialLink, SocialListContainer, SocialLinksHeader, TwitterLink } from "./SocialColumnList.styles";
 
 interface Props {
   backgroundColor: string;
