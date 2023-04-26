@@ -31,7 +31,7 @@ export const theme = {
     rem: {
       xxs: '0.25rem',
       xs: '0.5rem',
-      sm: '1rem',
+      sm: '1.1rem',
       ssm: '1.3rem',
       mdsm: '1.5rem',
       md: '1.8rem',
@@ -83,7 +83,7 @@ export const theme = {
 
   pageSizes: {
     // * Page sized
-    mobileMini: '395px',
+    mobileMini: '385px',
     mobile: '425px',
     tablet: '768px',
     smallMonitor: '1024px',

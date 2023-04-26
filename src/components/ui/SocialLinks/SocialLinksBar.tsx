@@ -5,7 +5,7 @@ import { FaGithub, FaTwitter, FaLinkedin, FaFilePdf } from "react-icons/fa";
 import { GithubLink, LinkedInLink, ResumeLink, SocialLink, SocialLinksContainer, SocialLinksHeader, TwitterLink } from "./SocialLinksBar.styles";
 
 interface Props {
-  backgroundColor: string
+  backgroundColor: string;
 }
 
 const SocialLinksBar = ({ backgroundColor }: Props) => {

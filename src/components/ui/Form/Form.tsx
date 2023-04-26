@@ -10,7 +10,12 @@ import useAutosizeTextArea from '../../../hooks/useAutoSizingTextArea';
 import useInput from '../../../hooks/useInput';
 import Button from '../Button/Button';
 
-const Form = () => {
+interface Props {
+  header?: string;
+  subHeader?: string;
+}
+
+const Form = ({ header, subHeader }: Props) => {
   const MySwal = withReactContent(Swal);
   const form = useRef() as React.MutableRefObject<HTMLFormElement>;
   const nameInput = useInput({ initialValue: '' });
@@ -52,9 +57,9 @@ const Form = () => {
   return (
     <FormStyled role="form" onSubmit={handleSubmit} ref={form}>
       <FormHeaderContainer grid-area='header'>
-        <FormHeaderText>Let's talk.</FormHeaderText>
+        <FormHeaderText>{header}</FormHeaderText>
         <br />
-        <FormSubHeaderText>New projects, freelance inquiry or even a coffee</FormSubHeaderText>
+        <FormSubHeaderText>{subHeader}</FormSubHeaderText>
       </FormHeaderContainer>
 
       <FormGroup grid-area='nameInput'>

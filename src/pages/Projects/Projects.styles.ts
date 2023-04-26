@@ -13,10 +13,25 @@ export const ProjectsContainer = styled.div`
   position: relative;
   color: white;
   background: ${theme.colors.primaryDark};
+  justify-items: center;
   align-items: end;
   padding: ${theme.sizes.pxSize['xl']} 0;
   grid-template-areas: 'title' 'info' 'image1' 'image2' 'image3';
   grid-gap: ${theme.sizes.rem['sm']};
+
+  @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
+    /* width: ${theme.sizes.percentage['90']}; */
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: ${theme.pageSizes.tablet}) {
+  }
+
+  @media screen and (max-width: ${theme.pageSizes.mobile}) {
+  }
+
+  @media screen and (max-width: ${theme.pageSizes.mobileMini}) {
+  }
 `
 
 export const ProjectImage = styled.img`
@@ -24,8 +39,18 @@ export const ProjectImage = styled.img`
   width: ${theme.sizes.percentage['100']};
   margin-top: ${theme.sizes.rem['mdlg']};
 
+  @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
+  }
+
+  @media screen and (max-width: ${theme.pageSizes.tablet}) {
+  }
+
+  @media screen and (max-width: ${theme.pageSizes.mobile}) {
+    width: ${theme.sizes.percentage['80']};
+  }
+
   @media screen and (max-width: ${theme.pageSizes.mobileMini}) {
-    margin-top: ${theme.sizes.rem['xxs']};
+    margin-top: ${theme.sizes.pxSize['sm']};
   }
 `
 
@@ -48,6 +73,7 @@ export const ProjectTitle = styled.p`
   }
 
   @media screen and (max-width: ${theme.pageSizes.mobileMini}) {
+    font-size: ${theme.sizes.rem['sm']};
   }
 `
 
@@ -65,6 +91,7 @@ export const ProjectLink = styled.a`
 export const ProjectBox = styled.div`
   width: ${theme.sizes.percentage['90']};
   margin: 0 auto;
+  text-align: center;
   margin-top: ${theme.sizes.rem['lg']};
   & > ${ProjectLink} {
     grid-area: image;

@@ -5,7 +5,7 @@ import { theme } from '../../styles/theme'
 export const AboutMeContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: 4rem 1fr auto;
   grid-column-gap: 0px;
   grid-row-gap: 15px;
   grid-template-areas:
@@ -34,8 +34,8 @@ export const PhotoBox = styled.div`
   top: 0;
   height: ${theme.sizes.viewHeight['30']};
   width: ${theme.sizes.viewWidth['70']};
-  border-left: 2px solid black;
-  border-bottom: 2px solid black;
+  border-left: 4px double black;
+  border-bottom: 4px double black;
   border-radius: ${theme.sizes.percentage['100']};
   margin: 0 ${theme.sizes.rem['sm']};
   z-index: 1;
@@ -101,6 +101,7 @@ export const InformationBox = styled.div`
   font-size: ${theme.sizes.rem['mdlg']};
 
   @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
+    width: ${theme.sizes.viewWidth['80']};
     font-size: ${theme.sizes.rem['md']};
   }
 
@@ -108,6 +109,7 @@ export const InformationBox = styled.div`
   }
 
   @media screen and (max-width: ${theme.pageSizes.mobile}) {
+    width: 75vw;
   }
 
   @media screen and (max-width: ${theme.pageSizes.mobileMini}) {

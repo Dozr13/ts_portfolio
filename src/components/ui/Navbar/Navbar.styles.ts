@@ -5,9 +5,9 @@ import { theme } from '../../../styles/theme'
 export const StyledNav = styled.nav`
   position: fixed;
   width: ${theme.sizes.percentage['100']};
-  height: 55px;
-  padding: 0 20px;
+  height: ${theme.sizes.percentage['10']};
+  padding: ${theme.sizes.pxSize['zero']};
   display: flex;
   justify-content: space-between;
-  z-index: 50;
+  z-index: 9;
 `

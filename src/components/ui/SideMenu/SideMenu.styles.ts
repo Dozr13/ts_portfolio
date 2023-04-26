@@ -31,7 +31,7 @@ export const StyledMenu = styled.nav<Props>`
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;
-  z-index: 10;
+  z-index: 8;
 
   @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
     width: ${theme.sizes.percentage['50']};
@@ -42,6 +42,7 @@ export const StyledMenu = styled.nav<Props>`
   }
 
   @media screen and (max-width: ${theme.pageSizes.mobile}) {
+    height: ${theme.sizes.percentage['100']};
     width: ${theme.sizes.percentage['100']};
   }
 
@@ -65,6 +66,11 @@ export const StyledMenu = styled.nav<Props>`
     }
 
     @media screen and (max-width: ${theme.pageSizes.mobile}) {
+      font-size: ${theme.sizes.rem['md']};
+    }
+
+    @media screen and (max-width: ${theme.pageSizes.mobileMini}) {
+      font-size: ${theme.sizes.rem['mdsm']};
     }
 
     &:hover {

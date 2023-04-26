@@ -8,7 +8,7 @@ const Navbar = () => {
     <StyledNav>
       <Hamburger />
     </StyledNav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

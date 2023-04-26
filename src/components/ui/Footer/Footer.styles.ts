@@ -4,9 +4,13 @@ import { theme } from '../../../styles/theme'
 
 export const StyledFooter = styled.footer`
   height: ${theme.sizes.percentage['100']};
-  padding: ${theme.sizes.rem['mdlg']};
+  padding: ${theme.sizes.rem['xl']};
   background: ${theme.colors.primaryDark};
   text-align: center;
+
+  @media screen and (max-width: ${theme.pageSizes.mobileMini}) {
+    padding: ${theme.sizes.rem['md']};
+  }
 `
 
 export const FooterText = styled.span`

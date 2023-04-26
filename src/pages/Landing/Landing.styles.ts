@@ -20,7 +20,7 @@ export const LandingContainer = styled.div`
   justify-content: center;
   align-items: center;
   background: ${theme.colors.primaryDark};
-  /* height: ${theme.sizes.viewHeight['100']}; */
+  height: ${theme.sizes.viewHeight['100']};
 
   @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
   }
@@ -123,10 +123,11 @@ export const IntroText = styled.p`
   }
 
   @media screen and (max-width: ${theme.pageSizes.mobile}) {
+    font-size: ${theme.sizes.rem['mdsm']};
   }
 
   @media screen and (max-width: ${theme.pageSizes.mobileMini}) {
-    font-size: ${theme.sizes.rem['mdsm']};
+    font-size: ${theme.sizes.rem['sm']};
   }
 `
 
@@ -145,4 +146,13 @@ export const NameSignature = styled.p<Props>`
 
   @media screen and (max-width: ${theme.pageSizes.mobile}) {
   }
+`
+
+export const LandingSocialLinksContainer = styled.div`
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+  width: fit-content;
+  height: fit-content;
+  z-index: 8;
 `

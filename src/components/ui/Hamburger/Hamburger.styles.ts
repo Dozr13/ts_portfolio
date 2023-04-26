@@ -19,12 +19,12 @@ export const StyledBurger = styled.button<Props>`
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 20;
+  z-index: 10;
 
   @media screen and (max-width: ${theme.pageSizes.mobile}) {
     position: fixed;
-    top: ${theme.sizes.rem['sm']};
-    left: ${theme.sizes.rem['sm']};
+    top: ${theme.sizes.rem['mdsm']};
+    left: ${theme.sizes.rem['mdsm']};
   }
 
   &:focus {

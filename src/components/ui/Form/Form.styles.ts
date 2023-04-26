@@ -9,10 +9,18 @@ export const FormStyled = styled.form`
   justify-content: center;
   background: #2f2f2f;
   padding: ${theme.sizes.pxSize['mdlg']} 0;
+
+  @media screen and (max-width: ${theme.pageSizes.mobile}) {
+    font-size: ${theme.sizes.rem['md']};
+  }
 `
 export const FormHeaderContainer = styled.div`
   text-align: center;
   margin: ${theme.sizes.rem['mdsm']};
+
+  @media screen and (max-width: ${theme.pageSizes.mobile}) {
+    padding: ${theme.sizes.rem['sm']};
+  }
 `
 
 export const FormHeaderText = styled.span`
@@ -40,6 +48,9 @@ export const FormGroup = styled.div`
   position: relative;
   width: ${theme.sizes.viewWidth['50']};
   height: ${theme.sizes.rem['mdlg']};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0 auto;
   margin-bottom: ${theme.sizes.rem['lg']};
 
@@ -66,13 +77,22 @@ export const FormInput = styled.input`
   font: ${theme.defaultFont};
   font-size: ${theme.sizes.rem['ssm']};
   font-weight: 500;
+
+  @media screen and (max-width: ${theme.pageSizes.mobile}) {
+    width: ${theme.sizes.viewWidth['70']};
+  }
 `
 
 export const FormFlexGroup = styled(FormGroup)`
   height: auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: ${theme.pageSizes.mobile}) {
+    width: ${theme.sizes.viewWidth['80']};
+  }
 `
 
 export const FormTextArea = styled.textarea`
@@ -86,4 +106,8 @@ export const FormTextArea = styled.textarea`
   transition: border-color 150ms ease;
   width: ${theme.sizes.percentage['100']};
   margin-bottom: ${theme.sizes.rem['mdlg']};
+
+  @media screen and (max-width: ${theme.pageSizes.mobile}) {
+    width: ${theme.sizes.viewWidth['70']};
+  }
 `
