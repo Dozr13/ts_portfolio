@@ -1,3 +1,10 @@
+import {
+  RiGithubLine,
+  RiInstagramLine,
+  RiLinkedinLine,
+  RiTwitterLine,
+  RiFileList3Line,
+} from 'react-icons/ri'
 import styled from 'styled-components'
 
 import { theme } from '../../../styles/theme'
@@ -18,6 +25,11 @@ export const SocialListColumnContainer = styled.div`
   align-content: center;
   justify-content: center;
   background: ${theme.colors.transparent};
+
+  svg {
+    height: ${theme.sizes.rem['md']};
+    width: ${theme.sizes.rem['md']};
+  }
 `
 
 export const SocialListRowContainer = styled.div`
@@ -32,10 +44,15 @@ export const SocialListRowContainer = styled.div`
   align-items: center;
   align-content: center;
   justify-content: center;
-  background: ${theme.colors.secondaryMid};
-
+  background: ${theme.colors.primaryDark};
+  border: ${theme.sizes.pxSize['md']} double ${theme.colors.primaryMid};
   > * {
     margin: 0 auto;
+  }
+
+  svg {
+    height: ${theme.sizes.rem['lg']};
+    width: ${theme.sizes.rem['lg']};
   }
 `
 
@@ -56,29 +73,42 @@ export const SocialLinksHeader = styled.p`
   }
 `
 
-export const SocialLink = styled.a`
-  svg {
-    height: ${theme.sizes.rem['md']};
-    width: ${theme.sizes.rem['md']};
-  }
+export const GithubIcon = styled(RiGithubLine)`
+  color: #000;
 `
 
-export const GithubLink = styled.div`
+export const LinkedInIcon = styled(RiLinkedinLine)`
+  color: #0077b5;
+`
+
+export const InstagramIcon = styled(RiInstagramLine)`
+  color: #e1306c;
+`
+
+export const TwitterIcon = styled(RiTwitterLine)`
+  color: #1da1f2;
+`
+
+export const ResumeIcon = styled(RiFileList3Line)`
+  color: #f1f1f1;
+`
+
+export const GithubLink = styled.a`
   grid-area: github;
 `
 
-export const LinkedInLink = styled.div`
+export const LinkedInLink = styled.a`
   grid-area: linkedIn;
 `
 
-export const InstagramLink = styled.div`
+export const InstagramLink = styled.a`
   grid-area: instagram;
 `
 
-export const TwitterLink = styled.div`
+export const TwitterLink = styled.a`
   grid-area: twitter;
 `
 
-export const ResumeLink = styled.div`
+export const ResumeLink = styled.a`
   grid-area: resume;
 `

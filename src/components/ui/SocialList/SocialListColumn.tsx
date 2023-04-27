@@ -1,36 +1,26 @@
 import React from "react";
 
-import { RiFileList3Line, RiGithubLine, RiInstagramLine, RiLinkedinLine, RiTwitterLine } from 'react-icons/ri';
-
-import { GithubLink, InstagramLink, LinkedInLink, ResumeLink, SocialLink, SocialListColumnContainer, TwitterLink } from "./SocialColumn.styles";
+import { GithubIcon, GithubLink, InstagramIcon, InstagramLink, LinkedInIcon, LinkedInLink, ResumeIcon, ResumeLink, SocialListColumnContainer, TwitterIcon, TwitterLink } from "./SocialColumn.styles";
 
 const SocialListColumn = () => {
+  // const iconSize = 24; // define a size for your icons
+
   return (
     <SocialListColumnContainer>
-      <GithubLink>
-        <SocialLink target="_blank" href="https://github.com/Dozr13" >
-          <RiGithubLine style={{ color: '#000' }} />
-        </SocialLink>
+      <GithubLink target="_blank" href="https://github.com/Dozr13" >
+        <GithubIcon />
       </GithubLink>
-      <LinkedInLink>
-        <SocialLink target="_blank" href="https://www.linkedin.com/in/wadejp8/" >
-          <RiLinkedinLine style={{ color: '	 #0077b5' }} grid-area='linkedIn' />
-        </SocialLink>
+      <LinkedInLink target="_blank" href="https://www.linkedin.com/in/wadejp8/">
+        <LinkedInIcon />
       </LinkedInLink>
-      <InstagramLink>
-        <SocialLink target="_blank" href="https://www.instagram.com/dozr13/?next=%2Freel%2FCTqMiOGgejy%2F" >
-          <RiInstagramLine style={{ color: '	#1DA1F2' }} grid-area='twitter' />
-        </SocialLink>
+      <InstagramLink target="_blank" href="https://www.instagram.com/dozr13/?next=%2Freel%2FCTqMiOGgejy%2F">
+        <InstagramIcon />
       </InstagramLink>
-      <TwitterLink>
-        <SocialLink target="_blank" href="https://www.twitter.com/wadejp8" >
-          <RiTwitterLine style={{ color: '	#1DA1F2' }} grid-area='twitter' />
-        </SocialLink>
+      <TwitterLink target="_blank" href="https://www.twitter.com/wadejp8">
+        <TwitterIcon />
       </TwitterLink>
-      <ResumeLink>
-        <SocialLink target="_blank" href="https://docs.google.com/document/d/1Ja0uqPVd4SAd6inF11Ov8-SxaeybiXui58eJSh0QOFI/edit?usp=sharing" >
-          <RiFileList3Line style={{ color: '#FFF' }} grid-area='resume' />
-        </SocialLink>
+      <ResumeLink target="_blank" href="https://docs.google.com/document/d/1Ja0uqPVd4SAd6inF11Ov8-SxaeybiXui58eJSh0QOFI/edit?usp=sharing">
+        <ResumeIcon />
       </ResumeLink>
     </SocialListColumnContainer>
   );
