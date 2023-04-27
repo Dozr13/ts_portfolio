@@ -1,11 +1,8 @@
-import { useEffect, MutableRefObject, SetStateAction } from 'react'
+import { useEffect } from 'react'
 
-interface Props {
-  ref: MutableRefObject<Element | null>
-  handler: (value: SetStateAction<boolean>) => void
-}
+import { UseOnClickOutsideProps } from '../types/types'
 
-const useOnClickOutside = ({ ref, handler }: Props): void => {
+const useOnClickOutside = ({ ref, handler }: UseOnClickOutsideProps): void => {
   useEffect(() => {
     const listener = (event: MouseEvent) => {
       if (!ref.current || ref.current.contains(event.target as Node)) {

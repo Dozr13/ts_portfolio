@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 
 import { StyledBurger } from './Hamburger.styles';
 import { MenuContext } from '../../../context/MenuContext';
-import { scrollToElement } from '../../../hooks/useScrollToElement';
+import { useScrollToElement } from '../../../hooks/useScrollToElement';
 import SideMenu from '../SideMenu/SideMenu';
 
 const Hamburger = () => {
@@ -14,7 +14,7 @@ const Hamburger = () => {
   };
 
   const handleMenuItemClick = (id: string) => {
-    scrollToElement(id);
+    useScrollToElement({ id });
     handleMenuContext();
   };
 

@@ -8,14 +8,11 @@ import { FormStyled, FormGroup, FormInput, FormLabel, FormHeaderContainer, FormH
 import apiKeys from '../../../api/.secret/apiKeys';
 import useAutosizeTextArea from '../../../hooks/useAutoSizingTextArea';
 import useInput from '../../../hooks/useInput';
+import { FormProps } from '../../../types/types';
 import Button from '../Button/Button';
 
-interface Props {
-  header?: string;
-  subHeader?: string;
-}
 
-const Form = ({ header, subHeader }: Props) => {
+const Form = ({ header, subHeader }: FormProps) => {
   const MySwal = withReactContent(Swal);
   const form = useRef() as React.MutableRefObject<HTMLFormElement>;
   const nameInput = useInput({ initialValue: '' });

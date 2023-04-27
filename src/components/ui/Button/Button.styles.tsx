@@ -2,8 +2,12 @@ import styled from "styled-components";
 
 import { theme } from "../../../styles/theme";
 
-export const StyledButton = styled.button`
-   border-top: 1px solid #0aa866;
+export const StyledButton = styled.button<{ type?: 'button' | 'submit' | 'reset'; }>`
+  &[type="button"] {
+    /* add styles for default button type here */
+  }
+  &[type="submit"] {
+  border-top: 1px solid #0aa866;
    background: #74d665;
    background: -webkit-gradient(linear, left top, left bottom, from(${theme.colors.buttonDark}), to(#74d665));
    background: -webkit-linear-gradient(top, ${theme.colors.buttonDark}, #74d665);
@@ -21,4 +25,8 @@ export const StyledButton = styled.button`
    text-decoration: none;
    color: ${theme.colors.buttonLight};
    font: ${theme.defaultFont}
-`
+  };
+    &[type="reset"] {
+    /* add styles for reset type here */
+  };
+`;

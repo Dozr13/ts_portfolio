@@ -2,13 +2,11 @@ import React, { useContext } from 'react';
 
 import { MenuLink, MenuListItem, StyledMenu } from './SideMenu.styles';
 import { MenuContext } from '../../../context/MenuContext';
+import { SideMenuProps } from '../../../types/types';
 import SocialListRow from '../SocialList/SocialListRow';
 
-interface Props {
-  handleMenuItemClick: (id: string) => void;
-}
 
-const SideMenu = ({ handleMenuItemClick }: Props) => {
+const SideMenu = ({ handleMenuItemClick }: SideMenuProps) => {
   const { isOpenContext, setMenuOpen } = useContext(MenuContext);
   const handleMenuContext = () => {
     if (setMenuOpen) {
@@ -46,7 +44,7 @@ const SideMenu = ({ handleMenuItemClick }: Props) => {
           Back to top
         </MenuLink>
       </MenuListItem>
-      <SocialListRow header='Find me at:' grid-area='socialLinksBar' />
+      <SocialListRow header='Find me at:' grid-area='socialLinks' />
     </StyledMenu>
   );
 };

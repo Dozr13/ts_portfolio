@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 
-type Props = {
-  initialValue: string
-}
+import { UseInputProps } from '../types/types'
 
-const useInput = ({ initialValue }: Props) => {
+const useInput = ({ initialValue }: UseInputProps) => {
   const [value, setValue] = useState<string>(initialValue)
 
   const reset = () => {

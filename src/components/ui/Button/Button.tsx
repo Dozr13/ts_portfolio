@@ -1,16 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-import { StyledButton } from './Button.styles'
+import { StyledButton } from './Button.styles';
+import { ButtonProps } from '../../../types/types';
 
-interface Props {
-  title: string;
-  type?: "button" | "submit" | "reset" | undefined;
-}
-
-const Button = ({ title, type }: Props) => {
+const Button = ({ title, type }: ButtonProps) => {
   return (
     <StyledButton type={type}>{title}</StyledButton>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;

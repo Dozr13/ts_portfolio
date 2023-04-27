@@ -1,12 +1,9 @@
 import styled from 'styled-components'
 
 import { theme } from '../../../styles/theme'
+import { IsOpenProps } from '../../../types/types'
 
-interface Props {
-  isOpen: boolean
-}
-
-export const StyledMenu = styled.nav<Props>`
+export const StyledMenu = styled.nav<IsOpenProps>`
   position: inherit;
   display: grid;
   grid-template-columns: 1fr;
@@ -19,7 +16,7 @@ export const StyledMenu = styled.nav<Props>`
     'projects'
     'contact'
     'home'
-    'socialLinksBar';
+    'socialLinks';
 
   list-style: none;
   align-items: end;

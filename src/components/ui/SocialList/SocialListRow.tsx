@@ -3,12 +3,9 @@ import React from "react";
 import { RiGithubLine, RiLinkedinLine, RiInstagramLine, RiTwitterLine, RiFileList3Line } from "react-icons/ri";
 
 import { GithubLink, InstagramLink, LinkedInLink, ResumeLink, SocialLink, SocialLinksHeader, SocialListRowContainer, TwitterLink } from "./SocialColumn.styles";
+import { SocialLinksProps } from "../../../types/types";
 
-interface Props {
-  header: string;
-}
-
-const SocialListRow = ({ header }: Props) => {
+const SocialListRow = ({ header }: SocialLinksProps) => {
   return (
     <SocialListRowContainer>
       <SocialLinksHeader>{header}</SocialLinksHeader>
