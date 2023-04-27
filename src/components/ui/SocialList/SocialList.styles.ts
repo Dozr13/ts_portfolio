@@ -10,21 +10,56 @@ import styled from 'styled-components'
 import { theme } from '../../../styles/theme'
 
 export const SocialListColumnContainer = styled.div`
+  position: relative;
   display: grid;
-  grid-template-columns: 1;
+  grid-template-columns: 1fr;
   grid-template-rows: repeat(5, ${theme.sizes.percentage['10']});
-  grid-row-gap: ${theme.sizes.rem['md']};
+  grid-row-gap: ${theme.sizes.rem['sm']};
   grid-template-areas:
     'github'
     'linkedIn'
     'instagram'
     'twitter'
     'resume';
+  height: fit-content;
   width: fit-content;
   align-items: center;
   align-content: center;
   justify-content: center;
   background: ${theme.colors.transparent};
+
+  &::before {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 150%;
+    margin-right: 20px;
+    background: ${theme.colors.primaryMid};
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-100%, 0);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 1px;
+    height: 150%;
+    background: ${theme.colors.transparent};
+    border-left: 1px solid ${theme.colors.primaryMid};
+    z-index: 0;
+  }
+
+  & > * {
+    background: ${theme.colors.primaryDark};
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    z-index: 2;
+  }
 
   svg {
     height: ${theme.sizes.rem['md']};

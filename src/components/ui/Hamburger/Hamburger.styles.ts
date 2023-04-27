@@ -52,7 +52,11 @@ export const StyledBurger = styled.button<Props>`
     }
 
     :nth-child(3) {
+      width: 65%;
+    }
+    :nth-child(3) {
       transform: ${({ isOpen }) => (isOpen ? 'rotate(-45deg)' : 'rotate(0)')};
+      width: ${({ isOpen }) => (isOpen ? '100%' : '55%')};
     }
   }
 `

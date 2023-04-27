@@ -1,7 +1,8 @@
-import styled from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
 
 import { ReactComponent as Logo } from '../../assets/images/svg/logo-stamp.svg'
 import { theme } from '../../styles/theme'
+import { IsOpenProps } from '../../types/types'
 
 export const LandingContainer = styled.div`
   display: grid;
@@ -143,11 +144,50 @@ export const NameSignature = styled.p`
   }
 `
 
-export const LandingSocialLinksContainer = styled.div`
+const bounceAnimation = keyframes`
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-80px);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-40px);
+  }
+  80% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+`
+
+export const LandingSocialLinksContainer = styled.div<IsOpenProps>`
   position: fixed;
   bottom: 0;
   right: 10px;
+  margin-bottom: ${theme.sizes.rem['xl']};
   width: fit-content;
   height: fit-content;
   z-index: 8;
+  transition: transform 0.4s ease-in-out;
+  transform: ${({ isOpen }) => (isOpen ? 'translateY(150%)' : 'translateY(0)')};
+  animation: ${({ isOpen }) =>
+    isOpen
+      ? 'none'
+      : css`
+          ${bounceAnimation} 0.7s ease-in-out
+        `};
+
+  @media screen and (max-width: ${theme.pageSizes.mobile}) {
+    ${({ isOpen }) =>
+      isOpen
+        ? 'none'
+        : css`
+            ${bounceAnimation} 0.5s ease-in-out
+          `};
+  }
 `

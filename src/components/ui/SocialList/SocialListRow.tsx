@@ -1,7 +1,7 @@
 import React from "react";
 
 
-import { GithubIcon, GithubLink, InstagramIcon, InstagramLink, LinkedInIcon, LinkedInLink, ResumeIcon, ResumeLink, SocialLinksHeader, SocialListRowContainer, TwitterIcon, TwitterLink } from "./SocialColumn.styles";
+import { GithubIcon, GithubLink, InstagramIcon, InstagramLink, LinkedInIcon, LinkedInLink, ResumeIcon, ResumeLink, SocialLinksHeader, SocialListRowContainer, TwitterIcon, TwitterLink } from "./SocialList.styles";
 import { SocialLinksProps } from "../../../types/types";
 
 const SocialListRow = ({ header }: SocialLinksProps) => {

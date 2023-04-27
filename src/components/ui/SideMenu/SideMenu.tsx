@@ -7,21 +7,12 @@ import SocialListRow from '../SocialList/SocialListRow';
 
 
 const SideMenu = ({ handleMenuItemClick }: SideMenuProps) => {
-  const { isOpenContext, setMenuOpen } = useContext(MenuContext);
-  const handleMenuContext = () => {
-    if (setMenuOpen) {
-      setMenuOpen(false);
-    }
-  };
-
+  const { isOpenContext } = useContext(MenuContext);
 
   return (
     <StyledMenu isOpen={isOpenContext}>
       <MenuListItem grid-area='aboutMe'>
-        <MenuLink onClick={() => {
-          handleMenuItemClick("about-me");
-          handleMenuContext();
-        }}>
+        <MenuLink onClick={() => handleMenuItemClick("about-me")}>
           <span role="img" aria-label="about me">&#x1F9D9;&#x200D;&#x2642;&#xFE0F;</span>
           About me
         </MenuLink>
@@ -45,7 +36,7 @@ const SideMenu = ({ handleMenuItemClick }: SideMenuProps) => {
         </MenuLink>
       </MenuListItem>
       <SocialListRow header='Find me at:' grid-area='socialLinks' />
-    </StyledMenu>
+    </StyledMenu >
   );
 };
 export default SideMenu;

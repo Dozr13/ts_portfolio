@@ -6,6 +6,10 @@ export type MenuContextType = {
   setMenuOpen?: (isOpenContext: boolean) => void
 }
 
+export interface IsOpenProps {
+  isOpen: boolean
+}
+
 // * hooks
 export type UseInputProps = {
   initialValue: string
@@ -41,9 +45,4 @@ export interface SideMenuProps {
 
 export interface SocialLinksProps {
   header: string
-}
-
-// * Multiple uses
-export interface IsOpenProps {
-  isOpen: boolean
 }

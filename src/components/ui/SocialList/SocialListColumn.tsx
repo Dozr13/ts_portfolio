@@ -1,9 +1,8 @@
 import React from "react";
 
-import { GithubIcon, GithubLink, InstagramIcon, InstagramLink, LinkedInIcon, LinkedInLink, ResumeIcon, ResumeLink, SocialListColumnContainer, TwitterIcon, TwitterLink } from "./SocialColumn.styles";
+import { GithubIcon, GithubLink, InstagramIcon, InstagramLink, LinkedInIcon, LinkedInLink, ResumeIcon, ResumeLink, SocialListColumnContainer, TwitterIcon, TwitterLink } from "./SocialList.styles";
 
 const SocialListColumn = () => {
-  // const iconSize = 24; // define a size for your icons
 
   return (
     <SocialListColumnContainer>
