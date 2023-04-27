@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components';
 
 import Footer from './components/ui/Footer/Footer';
 import Navbar from './components/ui/Navbar/Navbar';
+import { MenuContext } from './context/MenuContext';
 import useOnClickOutside from './hooks/useOnClickOutside';
 import AboutMe from './pages/AboutMe/AboutMe';
 import Contact from './pages/Contact/Contact';
@@ -16,17 +17,18 @@ const App = () => {
   const node = useRef<HTMLDivElement>(null);
   useOnClickOutside({ ref: node, handler: () => setIsOpen(false) });
 
-
   return (
     <ThemeProvider theme={theme}>
-      <div ref={node}>
-        <Navbar />
-      </div>
-      <Landing isOpen={isOpen} />
-      <AboutMe />
-      <Projects />
-      <Contact />
-      <Footer />
+      <MenuContext.Provider value={{ isOpenContext: isOpen, setMenuOpen: (isOpen: boolean) => setIsOpen(isOpen) }}>
+        <div ref={node}>
+          <Navbar />
+        </div>
+        <Landing />
+        <AboutMe />
+        <Projects />
+        <Contact />
+        <Footer />
+      </MenuContext.Provider>
     </ThemeProvider>
   );
 };

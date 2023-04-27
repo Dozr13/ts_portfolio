@@ -3,10 +3,6 @@ import styled from 'styled-components'
 import { ReactComponent as Logo } from '../../assets/images/svg/logo-stamp.svg'
 import { theme } from '../../styles/theme'
 
-interface Props {
-  isOpen: boolean
-}
-
 export const LandingContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
@@ -131,11 +127,10 @@ export const IntroText = styled.p`
   }
 `
 
-export const NameSignature = styled.p<Props>`
+export const NameSignature = styled.p`
   font-family: 'Charm', cursive;
   font-size: ${theme.sizes.rem['xl']};
   margin: 0;
-  color: ${({ isOpen }) => (isOpen ? '#0D0C1D' : '#EFFFFA')};
 
   @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
     font-size: ${theme.sizes.rem['lg']};

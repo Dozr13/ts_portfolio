@@ -5,12 +5,8 @@ import PageTitle from '../../components/ui/PageTitle/PageTitle';
 import { TitleBox } from '../../components/ui/PageTitle/PageTitle.styles';
 import SocialListColumn from '../../components/ui/SocialList/SocialListColumn';
 
-interface Props {
-  isOpen: boolean;
-}
+const Landing = () => {
 
-const Landing = ({ isOpen }: Props) => {
-  console.log(isOpen);
   return (
     <LandingContainer id="home">
       <TitleBox>
@@ -21,14 +17,12 @@ const Landing = ({ isOpen }: Props) => {
       </LogoContainer>
       <IntroContainer>
         <IntroText>Hi! I'm</IntroText>
-        <NameSignature isOpen={isOpen}>Wade Pate</NameSignature>
+        <NameSignature>Wade Pate</NameSignature>
         <IntroText>Full-stack Developer</IntroText>
       </IntroContainer>
-      {
-        !isOpen && <LandingSocialLinksContainer>
-          <SocialListColumn />
-        </LandingSocialLinksContainer>
-      }
+      <LandingSocialLinksContainer>
+        <SocialListColumn />
+      </LandingSocialLinksContainer>
     </LandingContainer>
   );
 };

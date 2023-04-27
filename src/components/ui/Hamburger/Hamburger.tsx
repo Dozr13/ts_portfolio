@@ -1,29 +1,33 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 
 import { StyledBurger } from './Hamburger.styles';
+import { MenuContext } from '../../../context/MenuContext';
 import { scrollToElement } from '../../../hooks/useScrollToElement';
 import SideMenu from '../SideMenu/SideMenu';
 
 const Hamburger = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false)
-
+  const { isOpenContext, setMenuOpen } = useContext(MenuContext);
+  const handleMenuContext = () => {
+    if (setMenuOpen) {
+      setMenuOpen(!isOpenContext);
+    }
+  };
 
   const handleMenuItemClick = (id: string) => {
-    scrollToElement(id)
-    setIsOpen(false)
-  }
-
+    scrollToElement(id);
+    handleMenuContext();
+  };
 
   return (
     <>
-      <StyledBurger isOpen={isOpen} onClick={() => setIsOpen(!isOpen)}>
+      <StyledBurger isOpen={isOpenContext} onClick={handleMenuContext}>
         <div />
         <div />
         <div />
       </StyledBurger>
-      <SideMenu isOpen={isOpen} handleMenuItemClick={handleMenuItemClick} />
+      <SideMenu handleMenuItemClick={handleMenuItemClick} />
     </>
-  )
-}
+  );
+};
 
 export default Hamburger;

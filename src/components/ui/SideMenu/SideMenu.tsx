@@ -1,18 +1,29 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import { MenuLink, MenuListItem, StyledMenu } from './SideMenu.styles';
+import { MenuContext } from '../../../context/MenuContext';
 import SocialListRow from '../SocialList/SocialListRow';
 
 interface Props {
-  isOpen: boolean;
   handleMenuItemClick: (id: string) => void;
 }
 
-const SideMenu = ({ isOpen, handleMenuItemClick }: Props) => {
+const SideMenu = ({ handleMenuItemClick }: Props) => {
+  const { isOpenContext, setMenuOpen } = useContext(MenuContext);
+  const handleMenuContext = () => {
+    if (setMenuOpen) {
+      setMenuOpen(false);
+    }
+  };
+
+
   return (
-    <StyledMenu isOpen={isOpen}>
+    <StyledMenu isOpen={isOpenContext}>
       <MenuListItem grid-area='aboutMe'>
-        <MenuLink onClick={() => handleMenuItemClick("about-me")}>
+        <MenuLink onClick={() => {
+          handleMenuItemClick("about-me");
+          handleMenuContext();
+        }}>
           <span role="img" aria-label="about me">&#x1F9D9;&#x200D;&#x2642;&#xFE0F;</span>
           About me
         </MenuLink>

@@ -1,12 +1,7 @@
-// * May implement later
-// import { createContext } from "react"
+import { createContext } from 'react'
 
-// export interface MenuContextType {
-//   isOpen: boolean
-//   setIsOpen: (isOpen: boolean) => void
-// }
+import { MenuContextType } from '../types/types'
 
-// export const MenuContext = createContext<MenuContextType>({
-//   isOpen: false,
-//   setIsOpen: () => {},
-// })
+export const MenuContext = createContext<MenuContextType>({
+  isOpenContext: false,
+})
