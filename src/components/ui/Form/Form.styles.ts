@@ -7,8 +7,9 @@ export const FormStyled = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #2f2f2f;
+  background: ${theme.colors.primaryHover};
   padding: ${theme.sizes.pxSize['mdlg']} 0;
+  width: 80%;
 
   @media screen and (max-width: ${theme.pageSizes.mobile}) {
     font-size: ${theme.sizes.rem['md']};
@@ -65,7 +66,10 @@ export const FormLabel = styled.label`
   font: ${theme.defaultFont};
   font-weight: 500;
   font-size: ${theme.sizes.rem['sm']};
-  padding: 0;
+
+  @media screen and (max-width: ${theme.pageSizes.mobile}) {
+    width: ${theme.sizes.viewWidth['70']};
+  }
 `
 
 export const FormInput = styled.input`

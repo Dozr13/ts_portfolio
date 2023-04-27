@@ -49,7 +49,6 @@ export const SocialListColumnContainer = styled.div`
     transform: translate(-50%, 0);
     width: 1px;
     height: 150%;
-    background: ${theme.colors.transparent};
     border-left: 1px solid ${theme.colors.primaryMid};
     z-index: 0;
   }
