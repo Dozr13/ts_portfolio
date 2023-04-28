@@ -3,6 +3,10 @@ import styled from 'styled-components'
 import { theme } from '../../../styles/theme'
 import { IsOpenProps } from '../../../types/types'
 
+export const MenuListItem = styled.li``
+
+export const MenuLink = styled.a``
+
 export const StyledMenu = styled.nav<IsOpenProps>`
   position: inherit;
   display: grid;
@@ -29,13 +33,14 @@ export const StyledMenu = styled.nav<IsOpenProps>`
   left: 0;
   transition: transform 0.3s ease-in-out;
   z-index: 8;
+  width: ${theme.sizes.percentage['20']};
 
   @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
     width: ${theme.sizes.percentage['50']};
   }
 
   @media screen and (max-width: ${theme.pageSizes.tablet}) {
-    width: ${theme.sizes.percentage['80']};
+    width: ${theme.sizes.percentage['50']};
   }
 
   @media screen and (max-width: ${theme.pageSizes.mobile}) {
@@ -43,7 +48,32 @@ export const StyledMenu = styled.nav<IsOpenProps>`
     width: ${theme.sizes.percentage['100']};
   }
 
-  a {
+  ${MenuListItem} {
+    transform: translateX(-150%);
+    transition: transform 0.5s ease-in-out;
+
+    &:nth-child(1) {
+      transition-delay: 0.1s;
+    }
+
+    &:nth-child(2) {
+      transition-delay: 0.2s;
+    }
+
+    &:nth-child(3) {
+      transition-delay: 0.3s;
+    }
+
+    &:nth-child(4) {
+      transition-delay: 0.4s;
+    }
+
+    &:nth-child(5) {
+      transition-delay: 0.5s;
+    }
+  }
+
+  ${MenuLink} {
     font: ${theme.defaultFont};
     font-size: ${theme.sizes.rem['mdlg']};
     text-transform: uppercase;
@@ -56,12 +86,6 @@ export const StyledMenu = styled.nav<IsOpenProps>`
     text-align: center;
     cursor: pointer;
 
-    @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
-    }
-
-    @media screen and (max-width: ${theme.pageSizes.tablet}) {
-    }
-
     @media screen and (max-width: ${theme.pageSizes.mobile}) {
       font-size: ${theme.sizes.rem['md']};
     }
@@ -71,11 +95,27 @@ export const StyledMenu = styled.nav<IsOpenProps>`
     }
 
     &:hover {
-      color: #343078;
+      color: ${theme.colors.buttonDark};
     }
   }
+
+  ${MenuListItem}:hover {
+    ${MenuLink} {
+      color: ${theme.colors.buttonHover};
+    }
+  }
+
+  ${MenuListItem}:hover ${MenuLink} span:first-child {
+    color: #343078;
+  }
+
+  ${MenuListItem}:hover ${MenuLink} span:last-child {
+    color: #343078;
+  }
+
+  ${({ isOpen }) =>
+    isOpen &&
+    `${MenuListItem} {
+      transform: translateX(0);
+    }`}
 `
-
-export const MenuListItem = styled.li``
-
-export const MenuLink = styled.a``

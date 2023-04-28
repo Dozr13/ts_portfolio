@@ -13,6 +13,7 @@ export const theme = {
     // * Miscellaneous colors
     buttonDark: '#0D0C1D',
     buttonLight: '#EFFFFA',
+    buttonHover: '#00BFFF',
   },
 
   // * Fonts

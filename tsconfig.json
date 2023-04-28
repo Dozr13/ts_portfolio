@@ -38,7 +38,7 @@
     "inlineSources": false,
     "isolatedModules": false,
     "lib": ["es2018", "dom"],
-    "module": "commonjs",
+    // "module": "commonjs",
     "moduleResolution": "node",
     "newLine": "lf",
     "noEmit": false,
@@ -63,11 +63,14 @@
     "strictNullChecks": true,
     "suppressExcessPropertyErrors": false,
     "suppressImplicitAnyIndexErrors": false,
-    "target": "es2017",
+    // "target": "es2017",
     "traceResolution": false,
     "rootDir": "",
     "outDir": "build",
-    "typeRoots": ["./assets", "./node_modules/@types"]
+    "typeRoots": ["./assets", "./node_modules/@types"],
+
+    "module": "esnext",
+    "target": "es5"
   },
   "include": [
     "src/**/*",
@@ -77,5 +80,5 @@
     "src/api/.secret",
     "src/pages/.Settings"
   ],
-  "exclude": []
+  "exclude": ["node_modules", "**/*.spec.ts"]
 }

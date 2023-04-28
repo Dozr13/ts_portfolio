@@ -22,7 +22,7 @@ const AboutMe = () => {
         and I'm a skilled software developer with over a decade of experience in the oil and gas industry. I've transitioned my career by attending DevMountain coding boot camp at the Web Development program remotely, which equipped me with the latest web development skills and best practices.
         <br />
         <br />
-        Currently, I work with In Time Tec, a company that partners with top-tier clients such as HP and PlexTrac. With my strong passion for coding and a tenacious mindset, I'm always ready to tackle complex problems and deliver high-quality code that exceeds customer expectations. My track record of success demonstrates my ability to handle challenging projects and take my skills to the next level.
+        Most recently, I worked with In Time Tec, a company that partners with top-tier clients such as HP and PlexTrac. With my strong passion for coding and a tenacious mindset, I'm always ready to tackle complex problems and deliver high-quality code that exceeds customer expectations. My track record of success demonstrates my ability to handle challenging projects and take my skills to the next level.
         <br />
         <br />
         I have extensive experience with various technologies such as

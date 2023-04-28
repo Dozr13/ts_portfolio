@@ -4,21 +4,12 @@ import { theme } from './theme';
 
 const GlobalStyles = createGlobalStyle`
    html,
+  #root {
+    margin: 0 auto;
+  }
   body {
     margin: 0;
     padding: 0;
-  }
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-  *,
-  *::after,
-  *::before {
-    box-sizing: border-box;
-  }
-  body {
-    margin: 0;
     align-items: center;
     background: ${theme.colors.primaryDark};
     color: ${theme.colors.primaryLight};
@@ -43,10 +34,10 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     outline: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
   }
-  #root {
-    margin: 0 auto;
+  a {
+    color: inherit;
+    text-decoration: none;
   }
 `;
 
