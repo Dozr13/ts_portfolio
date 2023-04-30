@@ -30,6 +30,28 @@ export interface ButtonProps {
   type?: 'button' | 'submit' | 'reset' | undefined
 }
 
+export interface CogWheelContainerProps {
+  cogCount: number
+  speed: number
+}
+
+export type StyledCogWheelsContainerProps = Omit<
+  CogWheelContainerProps,
+  'speed'
+>
+
+export interface CogWheelProps {
+  radius: number
+  speed: number
+  direction: 'forward' | 'reverse'
+  scrollPosition: number
+}
+
+export interface CogWheelItemProps {
+  radius: number
+  rotation: number
+}
+
 export interface FormProps {
   header?: string
   subHeader?: string

@@ -3,7 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 import { theme } from './theme';
 
 const GlobalStyles = createGlobalStyle`
-   html,
+  html,
   #root {
     margin: 0 auto;
   }
@@ -22,7 +22,12 @@ const GlobalStyles = createGlobalStyle`
     width: ${theme.sizes.percentage['100']};
     justify-content: center;
     text-rendering: optimizeLegibility;
-    overflow-x: hidden;
+    overflow: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    ::-webkit-scrollbar {
+      display: none;
+    }
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -38,6 +43,20 @@ const GlobalStyles = createGlobalStyle`
   a {
     color: inherit;
     text-decoration: none;
+  }
+   .CogWheel:nth-child(odd) {
+    top: calc(50% - 200px);
+    right: 20px;
+  }
+
+  .CogWheel:nth-child(even) {
+    top: calc(50% - 100px);
+    right: 40px;
+  }
+
+  /* add some margin or padding between the cogwheels */
+  .CogWheel + .CogWheel {
+    margin-top: 20px;
   }
 `;
 

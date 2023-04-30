@@ -80,5 +80,5 @@
     "src/api/.secret",
     "src/pages/.Settings"
   ],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  "exclude": []
 }
