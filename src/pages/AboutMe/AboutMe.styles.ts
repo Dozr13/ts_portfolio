@@ -109,7 +109,7 @@ export const InformationBox = styled.div`
   }
 
   @media screen and (max-width: ${theme.pageSizes.mobile}) {
-    width: 75vw;
+    width: ${theme.sizes.viewWidth['70']};
   }
 
   @media screen and (max-width: ${theme.pageSizes.mobileMini}) {
