@@ -33,14 +33,14 @@ export const StyledMenu = styled.nav<IsOpenProps>`
   left: 0;
   transition: transform 0.3s ease-in-out;
   z-index: 8;
-  width: ${theme.sizes.percentage['20']};
+  width: ${theme.sizes.percentage['40']};
 
   @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
-    width: ${theme.sizes.percentage['50']};
+    width: ${theme.sizes.percentage['40']};
   }
 
   @media screen and (max-width: ${theme.pageSizes.tablet}) {
-    width: ${theme.sizes.percentage['50']};
+    width: ${theme.sizes.percentage['80']};
   }
 
   @media screen and (max-width: ${theme.pageSizes.mobile}) {
