@@ -40,13 +40,13 @@ export const ProjectImage = styled.img`
   margin-top: ${theme.sizes.rem['mdlg']};
 
   @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
+    width: ${theme.sizes.percentage['80']};
   }
 
   @media screen and (max-width: ${theme.pageSizes.tablet}) {
   }
 
   @media screen and (max-width: ${theme.pageSizes.mobile}) {
-    width: ${theme.sizes.percentage['80']};
   }
 
   @media screen and (max-width: ${theme.pageSizes.mobileMini}) {
