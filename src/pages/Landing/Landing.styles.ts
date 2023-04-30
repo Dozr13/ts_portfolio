@@ -18,18 +18,6 @@ export const LandingContainer = styled.div`
   align-items: center;
   background: ${theme.colors.primaryDark};
   height: ${theme.sizes.viewHeight['100']};
-
-  @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
-  }
-
-  @media screen and (max-width: ${theme.pageSizes.tablet}) {
-  }
-
-  @media screen and (max-width: ${theme.pageSizes.mobile}) {
-  }
-
-  @media screen and (max-width: ${theme.pageSizes.mobileMini}) {
-  }
 `
 
 export const LogoContainer = styled.div`
@@ -37,11 +25,9 @@ export const LogoContainer = styled.div`
   align-self: start;
   justify-self: center;
 
-  @media screen and (max-width: ${theme.pageSizes.largeMonitor}) {
-    svg {
-      margin-top: ${theme.sizes.viewHeight['10']};
-      height: ${theme.sizes.viewHeight['50']};
-    }
+  svg {
+    margin-top: ${theme.sizes.viewHeight['10']};
+    height: ${theme.sizes.viewHeight['50']};
   }
 
   @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
@@ -86,12 +72,6 @@ export const IntroContainer = styled.div`
   align-items: center;
   padding-bottom: ${theme.sizes.pxSize['xl']};
 
-  @media screen and (max-width: ${theme.pageSizes.largeMonitor}) {
-  }
-
-  @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
-  }
-
   @media screen and (max-width: ${theme.pageSizes.tablet}) {
     font-size: ${theme.sizes.rem['mdlg']};
   }
@@ -116,9 +96,6 @@ export const IntroText = styled.p`
     font-size: ${theme.sizes.rem['mdlg']};
   }
 
-  @media screen and (max-width: ${theme.pageSizes.tablet}) {
-  }
-
   @media screen and (max-width: ${theme.pageSizes.mobile}) {
     font-size: ${theme.sizes.rem['mdsm']};
   }
@@ -135,12 +112,6 @@ export const NameSignature = styled.p`
 
   @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
     font-size: ${theme.sizes.rem['lg']};
-  }
-
-  @media screen and (max-width: ${theme.pageSizes.tablet}) {
-  }
-
-  @media screen and (max-width: ${theme.pageSizes.mobile}) {
   }
 `
 
