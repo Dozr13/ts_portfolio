@@ -24,8 +24,6 @@ const CogWheelContainer = ({
 
   const cogWheels = [];
 
-  console.log(cogWheels.length);
-
   for (let i = 0; i < cogCount; i++) {
     const direction = i % 2 === 0 ? "forward" : "reverse";
     const radius = i % 2 === 0 ? 20 : 30;
