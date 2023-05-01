@@ -9,6 +9,5 @@ export const ContactContainer = styled.div`
   display: flex;
   justify-content: center;
   color: white;
-  background: ${theme.colors.primaryDark};
   padding: ${theme.sizes.rem['lg']} ${theme.sizes.pxSize['zero']};
 `

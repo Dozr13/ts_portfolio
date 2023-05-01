@@ -16,7 +16,6 @@ export const LandingContainer = styled.div`
     'details';
   justify-content: center;
   align-items: center;
-  background: ${theme.colors.primaryDark};
   height: ${theme.sizes.viewHeight['100']};
 `
 

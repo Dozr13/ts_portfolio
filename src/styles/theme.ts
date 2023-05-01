@@ -49,6 +49,7 @@ export const theme = {
     percentage: {
       10: '10%',
       20: '20%',
+      25: '25%',
       30: '30%',
       40: '40%',
       50: '50%',
@@ -89,9 +90,9 @@ export const theme = {
   pageSizes: {
     // * Page sized
     mobileMini: '385px',
-    mobile: '425px',
+    mobile: '480px',
     tablet: '768px',
-    smallMonitor: '1024px',
-    largeMonitor: '1440px',
+    smallMonitor: '1224px',
+    largeMonitor: '1580px',
   },
 }

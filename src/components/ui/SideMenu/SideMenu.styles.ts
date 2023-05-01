@@ -7,6 +7,8 @@ export const MenuListItem = styled.li``
 
 export const MenuLink = styled.a``
 
+export const MenuWrapper = styled.div``
+
 export const StyledMenu = styled.nav<IsOpenProps>`
   position: inherit;
   display: grid;
@@ -25,18 +27,21 @@ export const StyledMenu = styled.nav<IsOpenProps>`
   list-style: none;
   align-items: end;
   justify-items: center;
-  background: #f1f1f1;
+  background: ${theme.colors.primaryLight};
   transform: ${({ isOpen }) =>
     isOpen ? 'translateX(0)' : 'translateX(-100%)'};
-  height: ${theme.sizes.viewHeight['100']};
+  height: ${theme.sizes.percentage['100']};
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;
   z-index: 8;
-  width: ${theme.sizes.percentage['40']};
+  width: ${theme.sizes.percentage['25']};
+  box-shadow: ${({ isOpen }) =>
+    isOpen ? `0 5px 15px ${theme.colors.buttonHover}` : 'none'};
+  border-right: 4px ridge ${theme.colors.buttonDark};
 
   @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
-    width: ${theme.sizes.percentage['40']};
+    width: ${theme.sizes.percentage['30']};
   }
 
   @media screen and (max-width: ${theme.pageSizes.tablet}) {

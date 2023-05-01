@@ -12,7 +12,6 @@ export const ProjectsContainer = styled.div`
   width: ${theme.sizes.percentage['100']};
   position: relative;
   color: white;
-  background: ${theme.colors.primaryDark};
   justify-items: center;
   align-items: end;
   padding: ${theme.sizes.pxSize['xl']} 0;

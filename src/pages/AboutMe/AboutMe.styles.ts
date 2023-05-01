@@ -14,7 +14,6 @@ export const AboutMeContainer = styled.div`
     'info';
   position: relative;
   color: white;
-  background: ${theme.colors.primaryDark};
   align-items: end;
   padding: ${theme.sizes.pxSize['lg']} 0;
   justify-items: center;
@@ -99,6 +98,7 @@ export const InformationBox = styled.div`
   margin-top: ${theme.sizes.rem['sm']};
   font: ${theme.defaultFont};
   font-size: ${theme.sizes.rem['mdlg']};
+  border-radius: 30px;
 
   @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
     width: ${theme.sizes.viewWidth['80']};
