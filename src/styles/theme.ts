@@ -91,8 +91,8 @@ export const theme = {
     // * Page sized
     mobileMini: '385px',
     mobile: '480px',
-    tablet: '768px',
-    smallMonitor: '1224px',
+    tablet: '913px',
+    smallMonitor: '1280px',
     largeMonitor: '1580px',
   },
 }

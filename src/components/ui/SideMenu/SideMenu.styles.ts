@@ -41,7 +41,7 @@ export const StyledMenu = styled.nav<IsOpenProps>`
   border-right: 4px ridge ${theme.colors.buttonDark};
 
   @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
-    width: ${theme.sizes.percentage['30']};
+    width: ${theme.sizes.percentage['40']};
   }
 
   @media screen and (max-width: ${theme.pageSizes.tablet}) {
@@ -96,7 +96,7 @@ export const StyledMenu = styled.nav<IsOpenProps>`
     }
 
     @media screen and (max-width: ${theme.pageSizes.mobileMini}) {
-      font-size: ${theme.sizes.rem['mdsm']};
+      font-size: ${theme.sizes.rem['sm']};
     }
 
     &:hover {
