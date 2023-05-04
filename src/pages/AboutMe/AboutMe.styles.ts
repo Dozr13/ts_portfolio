@@ -89,8 +89,8 @@ export const ImageOfSelf = styled.img`
 export const InformationBox = styled.div`
   grid-area: info;
   width: ${theme.sizes.viewWidth['90']};
-  background: ${theme.colors.primaryMid};
-  color: ${theme.colors.primaryDark};
+  background: ${props => props.theme.trim};
+  color: ${props => props.theme.background};
   border: 2px solid blue;
   text-align: center;
   padding: ${theme.sizes.rem['sm']};

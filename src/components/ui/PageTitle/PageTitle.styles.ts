@@ -8,7 +8,7 @@ export const PageTitleText = styled.p`
   left: 0;
   margin-left: 5rem;
   padding: ${theme.sizes.rem['md']} ${theme.sizes.rem['lg']};
-  color: ${theme.colors.primaryLight};
+  color: ${props => props.theme.text};
   font: ${theme.defaultFont};
   font-size: ${theme.sizes.rem['lg']};
 

@@ -7,7 +7,7 @@ export const FormStyled = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: ${theme.colors.primaryHover};
+  background: ${props => props.theme.hover};
   padding: ${theme.sizes.pxSize['mdlg']} 0;
   width: 80%;
 

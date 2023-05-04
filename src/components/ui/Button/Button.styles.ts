@@ -15,17 +15,29 @@ export const StyledButton = styled.button<{
       linear,
       left top,
       left bottom,
-      from(${theme.colors.buttonDark}),
+      from(${props => props.theme.buttonBackground}),
       to(#74d665)
     );
     background: -webkit-linear-gradient(
       top,
-      ${theme.colors.buttonDark},
+      ${props => props.theme.buttonBackground},
       #74d665
     );
-    background: -moz-linear-gradient(top, ${theme.colors.buttonDark}, #74d665);
-    background: -ms-linear-gradient(top, ${theme.colors.buttonDark}, #74d665);
-    background: -o-linear-gradient(top, ${theme.colors.buttonDark}, #74d665);
+    background: -moz-linear-gradient(
+      top,
+      ${props => props.theme.buttonBackground},
+      #74d665
+    );
+    background: -ms-linear-gradient(
+      top,
+      ${props => props.theme.buttonBackground},
+      #74d665
+    );
+    background: -o-linear-gradient(
+      top,
+      ${props => props.theme.buttonBackground},
+      #74d665
+    );
     padding: 11.5px 23px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -35,7 +47,7 @@ export const StyledButton = styled.button<{
     box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
     text-shadow: rgba(0, 0, 0, 0.4) 0 1px 0;
     text-decoration: none;
-    color: ${theme.colors.buttonLight};
+    color: ${props => props.theme.buttonText};
     font: ${theme.defaultFont};
   }
   &[type='reset'] {

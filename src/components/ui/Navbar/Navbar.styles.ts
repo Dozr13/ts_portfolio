@@ -8,6 +8,6 @@ export const StyledNav = styled.nav`
   height: ${theme.sizes.percentage['10']};
   padding: ${theme.sizes.pxSize['zero']};
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   z-index: 9;
 `

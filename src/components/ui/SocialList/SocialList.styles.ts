@@ -26,7 +26,7 @@ export const SocialListColumnContainer = styled.div`
   align-items: center;
   align-content: center;
   justify-content: center;
-  background: ${theme.colors.transparent};
+  background: ${props => props.theme.transparent};
 
   &::before {
     content: '';
@@ -34,7 +34,7 @@ export const SocialListColumnContainer = styled.div`
     width: 1px;
     height: 150%;
     margin-right: 20px;
-    background: ${theme.colors.primaryMid};
+    background: ${props => props.theme.trim};
     position: absolute;
     top: 0;
     left: 50%;
@@ -49,12 +49,12 @@ export const SocialListColumnContainer = styled.div`
     transform: translate(-50%, 0);
     width: 1px;
     height: 150%;
-    border-left: 1px solid ${theme.colors.primaryMid};
+    border-left: 1px solid ${props => props.theme.trim};
     z-index: 0;
   }
 
   & > * {
-    background: ${theme.colors.primaryDark};
+    background: ${props => props.theme.background};
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     z-index: 2;
@@ -78,8 +78,8 @@ export const SocialListRowContainer = styled.div`
   align-items: center;
   align-content: center;
   justify-content: center;
-  background: ${theme.colors.primaryDark};
-  border: ${theme.sizes.pxSize['md']} double ${theme.colors.primaryMid};
+  background: ${props => props.theme.background};
+  border: ${theme.sizes.pxSize['md']} double ${props => props.theme.trim};
   > * {
     margin: 0 auto;
   }
@@ -108,41 +108,36 @@ export const SocialLinksHeader = styled.p`
 `
 
 export const GithubIcon = styled(RiGithubLine)`
-  color: #000;
+  grid-area: github;
+  color: ${props => props.theme.githubColor};
 `
 
 export const LinkedInIcon = styled(RiLinkedinLine)`
-  color: #0077b5;
+  grid-area: linkedIn;
+  color: ${props => props.theme.linkedInColor};
 `
 
 export const InstagramIcon = styled(RiInstagramLine)`
-  color: #e1306c;
+  grid-area: instagram;
+  color: ${props => props.theme.instagramColor};
 `
 
 export const TwitterIcon = styled(RiTwitterLine)`
-  color: #1da1f2;
+  grid-area: twitter;
+  color: ${props => props.theme.twitterColor};
 `
 
 export const ResumeIcon = styled(RiFileList3Line)`
-  color: #f1f1f1;
-`
-
-export const GithubLink = styled.a`
-  grid-area: github;
-`
-
-export const LinkedInLink = styled.a`
-  grid-area: linkedIn;
-`
-
-export const InstagramLink = styled.a`
-  grid-area: instagram;
-`
-
-export const TwitterLink = styled.a`
-  grid-area: twitter;
-`
-
-export const ResumeLink = styled.a`
   grid-area: resume;
+  color: ${props => props.theme.resumeColor};
 `
+
+export const GithubLink = styled.a``
+
+export const LinkedInLink = styled.a``
+
+export const InstagramLink = styled.a``
+
+export const TwitterLink = styled.a``
+
+export const ResumeLink = styled.a``

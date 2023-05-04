@@ -15,7 +15,7 @@ export const StyledBurger = styled.button<Props>`
   justify-content: space-around;
   width: ${theme.sizes.rem['mdlg']};
   height: ${theme.sizes.rem['mdlg']};
-  background: transparent;
+  background: ${props => props.theme.transparent};
   border: none;
   cursor: pointer;
   padding: 0;
@@ -34,8 +34,8 @@ export const StyledBurger = styled.button<Props>`
   div {
     width: ${theme.sizes.rem['mdlg']};
     height: ${theme.sizes.rem['xxs']};
-    background: ${({ isOpen }) =>
-      isOpen ? theme.colors.buttonDark : theme.colors.buttonLight};
+    background: ${({ isOpen, theme }) =>
+      isOpen ? theme.background : theme.text};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;

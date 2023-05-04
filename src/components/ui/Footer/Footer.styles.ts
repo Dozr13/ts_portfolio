@@ -5,7 +5,7 @@ import { theme } from '../../../styles/theme'
 export const StyledFooter = styled.footer`
   height: ${theme.sizes.percentage['100']};
   padding: ${theme.sizes.rem['xl']};
-  background: ${theme.colors.primaryDark};
+  background: ${props => props.theme.background};
   text-align: center;
 
   @media screen and (max-width: ${theme.pageSizes.mobileMini}) {
@@ -14,13 +14,13 @@ export const StyledFooter = styled.footer`
 `
 
 export const FooterText = styled.span`
-  color: ${theme.colors.primaryLight};
+  color: ${props => props.theme.text};
   font: ${theme.defaultFont};
   font-size: ${theme.sizes.rem['md']};
 `
 
 export const FooterTextBold = styled.span`
-  color: ${theme.colors.primaryMid};
+  color: ${props => props.theme.trim};
   font-size: ${theme.sizes.rem['lg']};
   font-weight: 900;
   text-decoration: underline;

@@ -9,12 +9,23 @@ import AboutMe from './pages/AboutMe/AboutMe';
 import Contact from './pages/Contact/Contact';
 import Landing from './pages/Landing/Landing';
 import Projects from './pages/Projects/Projects';
+import { ThemeMode } from './types/types';
 
+interface AppProps {
+  toggleTheme: () => void;
+  currentTheme: ThemeMode;
+}
 
-const App = () => {
+const App = ({ currentTheme, toggleTheme }: AppProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  // const [isDarkTheme, setIsDarkTheme] = useState<boolean>(currentTheme === 'darkTheme');
+
   const node = useRef<HTMLDivElement>(null);
   useOnClickOutside({ ref: node, handler: () => setIsOpen(false) });
+
+  // const themeChange = () => {
+  //   setIsDarkTheme(!isDarkTheme)
+  // }
 
   return (
     <MenuContext.Provider value={{ isOpenContext: isOpen, setMenuOpen: (isOpen: boolean) => setIsOpen(isOpen) }}>
@@ -23,7 +34,7 @@ const App = () => {
         speed={10}
       />
       <div ref={node}>
-        <Navbar />
+        <Navbar currentTheme={currentTheme} toggleTheme={toggleTheme} />
       </div>
       <Landing />
       <AboutMe />

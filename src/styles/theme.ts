@@ -1,20 +1,41 @@
+import { darkTheme, lightTheme } from './themes/theme'
+
 export const theme = {
-  colors: {
-    // * Main colors
-    primaryDark: '#303731',
-    primaryMid: '#A2B9C2',
-    primaryLight: '#FAF9F6',
-    primaryHover: '#343078',
+  // darkTheme: {
+  //   // * Main colors
+  //   primaryDark: '#303731',
+  //   primaryMid: '#A2B9C2',
+  //   primaryLight: '#FAF9F6',
+  //   primaryHover: '#343078',
 
-    // * Secondary colors
-    secondaryMid: '#8d918d',
-    transparent: 'transparent',
+  //   // * Secondary colors
+  //   secondaryMid: '#8d918d',
+  //   transparent: 'transparent',
 
-    // * Miscellaneous colors
-    buttonDark: '#0D0C1D',
-    buttonLight: '#EFFFFA',
-    buttonHover: '#00BFFF',
-  },
+  //   // * Miscellaneous colors
+  //   buttonDark: '#0D0C1D',
+  //   buttonLight: '#EFFFFA',
+  //   buttonHover: '#00BFFF',
+  // },
+
+  // lightTheme: {
+  //   // * Main colors
+  //   primaryDark: '#FAF9F6',
+  //   primaryMid: '#A2B9C2',
+  //   primaryLight: '#303731',
+  //   primaryHover: '#343078',
+
+  //   // * Secondary colors
+  //   secondaryMid: '#8d918d',
+  //   transparent: 'transparent',
+
+  //   // * Miscellaneous colors
+  //   buttonDark: '#0D0C1D',
+  //   buttonLight: '#EFFFFA',
+  //   buttonHover: '#00BFFF',
+  // },
+  darkTheme: darkTheme,
+  lightTheme: lightTheme,
 
   // * Fonts
   defaultFont: 'bold 1rem/1.5 Roboto, sans-serif',

@@ -68,3 +68,25 @@ export interface SideMenuProps {
 export interface SocialLinksProps {
   header: string
 }
+
+// * Theme
+export type ThemeMode = 'lightTheme' | 'darkTheme'
+
+export interface CurrentThemeProps {
+  background: string
+  trim: string
+  text: string
+  hover: string
+  secondaryTrim: string
+  transparent: string
+  buttonBackground: string
+  buttonText: string
+  buttonHover: string
+  githubColor: string
+  linkedInColor: string
+  instagramColor: string
+  twitterColor: string
+  resumeColor: string
+  cogWheelBackground: string
+  themeMode: 'lightTheme' | 'darkTheme' // add themeMode property with the two options
+}

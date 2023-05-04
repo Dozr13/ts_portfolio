@@ -1,8 +1,24 @@
-import { createGlobalStyle } from 'styled-components';
+import React from 'react';
+
+import { ThemeProvider, createGlobalStyle } from 'styled-components';
 
 import { theme } from './theme';
+import { ThemeMode } from '../types/types';
 
-const GlobalStyles = createGlobalStyle`
+interface GlobalStyleProps {
+  background: string;
+  trim: string;
+  text: string;
+}
+
+interface GlobalStylesProviderProps {
+  themeMode: ThemeMode;
+  background: string;
+  trim: string;
+  text: string;
+}
+
+const GlobalStyles = createGlobalStyle<GlobalStyleProps>`
   html,
   #root {
     margin: 0 auto;
@@ -11,8 +27,8 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     align-items: center;
-    background: ${theme.colors.primaryDark};
-    color: ${theme.colors.primaryLight};
+    background: ${props => props.background};
+    color: ${props => props.text};
     display: flex;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
       Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
@@ -60,4 +76,14 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
-export default GlobalStyles;
+const GlobalStylesProvider: React.FC<GlobalStylesProviderProps> = ({ themeMode, background }) => {
+  const themeColors = themeMode === 'darkTheme' ? theme.darkTheme : theme.lightTheme;
+  // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  return (
+    <ThemeProvider theme={themeColors}>
+      <GlobalStyles background={background} trim={themeColors.trim} text={themeColors.text} />
+    </ThemeProvider>
+  );
+};
+
+export default GlobalStylesProvider;

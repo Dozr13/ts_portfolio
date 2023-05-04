@@ -88,7 +88,7 @@ export const IntroContainer = styled.div`
 export const IntroText = styled.p`
   font: ${theme.defaultFont};
   font-size: ${theme.sizes.rem['lg']};
-  color: ${theme.colors.primaryMid};
+  color: ${props => props.theme.trim};
   margin: 0;
 
   @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
