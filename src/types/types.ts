@@ -87,6 +87,5 @@ export interface CurrentThemeProps {
   instagramColor: string
   twitterColor: string
   resumeColor: string
-  cogWheelBackground: string
-  themeMode: 'lightTheme' | 'darkTheme' // add themeMode property with the two options
+  themeMode: 'lightTheme' | 'darkTheme'
 }

@@ -7,8 +7,9 @@ export const FormStyled = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: ${props => props.theme.hover};
+  background: ${props => props.theme.secondaryBackground};
   padding: ${theme.sizes.pxSize['mdlg']} 0;
+  color: ${props => props.theme.text};
   width: 80%;
 
   @media screen and (max-width: ${theme.pageSizes.mobile}) {
@@ -18,6 +19,7 @@ export const FormStyled = styled.form`
 export const FormHeaderContainer = styled.div`
   text-align: center;
   margin: ${theme.sizes.rem['mdsm']};
+  color: ${props => props.theme.text};
 
   @media screen and (max-width: ${theme.pageSizes.mobile}) {
     padding: ${theme.sizes.rem['sm']};

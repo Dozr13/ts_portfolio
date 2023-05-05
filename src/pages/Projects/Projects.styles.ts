@@ -19,22 +19,12 @@ export const ProjectsContainer = styled.div`
   grid-gap: ${theme.sizes.rem['sm']};
 
   @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
-    /* width: ${theme.sizes.percentage['90']}; */
     margin: 0 auto;
-  }
-
-  @media screen and (max-width: ${theme.pageSizes.tablet}) {
-  }
-
-  @media screen and (max-width: ${theme.pageSizes.mobile}) {
-  }
-
-  @media screen and (max-width: ${theme.pageSizes.mobileMini}) {
   }
 `
 
 export const ProjectImage = styled.img`
-  border: 1px double #fff;
+  border: 1px double ${props => props.theme.secondaryTrim};
   width: ${theme.sizes.percentage['100']};
   margin-top: ${theme.sizes.rem['mdlg']};
 
@@ -58,6 +48,7 @@ export const ProjectTitle = styled.p`
   font: ${theme.defaultFont};
   font-size: ${theme.sizes.rem['lg']};
   margin: 0;
+  color: ${props => props.theme.text};
 
   @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
     font-size: ${theme.sizes.rem['mdlg']};

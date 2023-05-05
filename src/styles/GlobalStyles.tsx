@@ -78,7 +78,7 @@ const GlobalStyles = createGlobalStyle<GlobalStyleProps>`
 
 const GlobalStylesProvider: React.FC<GlobalStylesProviderProps> = ({ themeMode, background }) => {
   const themeColors = themeMode === 'darkTheme' ? theme.darkTheme : theme.lightTheme;
-  // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
   return (
     <ThemeProvider theme={themeColors}>
       <GlobalStyles background={background} trim={themeColors.trim} text={themeColors.text} />

@@ -15,7 +15,6 @@ const Index = () => {
 
   const toggleTheme = () => {
     setCurrentTheme(currentTheme === 'lightTheme' ? 'darkTheme' : 'lightTheme');
-    console.log(currentTheme);
   };
 
   const themeColors = currentTheme === 'darkTheme' ? theme.darkTheme : theme.lightTheme;

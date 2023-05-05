@@ -18,14 +18,9 @@ interface AppProps {
 
 const App = ({ currentTheme, toggleTheme }: AppProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  // const [isDarkTheme, setIsDarkTheme] = useState<boolean>(currentTheme === 'darkTheme');
 
   const node = useRef<HTMLDivElement>(null);
   useOnClickOutside({ ref: node, handler: () => setIsOpen(false) });
-
-  // const themeChange = () => {
-  //   setIsDarkTheme(!isDarkTheme)
-  // }
 
   return (
     <MenuContext.Provider value={{ isOpenContext: isOpen, setMenuOpen: (isOpen: boolean) => setIsOpen(isOpen) }}>

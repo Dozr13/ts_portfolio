@@ -29,13 +29,13 @@ export const StyledCogWheelsContainer = styled.div<StyledCogWheelsContainerProps
 
 export const CogWheelItem = styled.div.attrs<CogWheelItemProps>(props => ({
   style: {
-    width: `${props.radius * 2.5}px`,
-    height: `${props.radius * 2.5}px`,
     transform: `rotate(${props.rotation}deg)`,
   },
 }))<CogWheelItemProps>`
   background-image: url(${cogWheelImage});
   background-size: cover;
+  width: ${({ radius }) => radius * 2.5}px;
+  height: ${({ radius }) => radius * 2.5}px;
 
   @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
     width: ${({ radius }) => radius * 2}px;

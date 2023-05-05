@@ -34,9 +34,9 @@ const AboutMe = () => {
           <SkillListItem>PostgreSQL</SkillListItem>
           <SkillListItem>MongoDB</SkillListItem>
           <SkillListItem>C#</SkillListItem>
-          <SkillListItem>WPF</SkillListItem>
           <SkillListItem>Linux</SkillListItem>
           <SkillListItem>ASP .NET</SkillListItem>
+          <SkillListItem>WPF</SkillListItem>
         </SkillList>
         I've worked on diverse projects ranging from web applications to complex data systems.
         <br />

@@ -1,47 +1,59 @@
+import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs'
 import styled from 'styled-components'
 
-export const Checkbox = styled.input`
-  height: 0;
-  width: 0;
-  visibility: hidden;
+import { theme } from '../../../styles/theme'
+
+export const ThemeContainer = styled.div`
+  width: ${theme.sizes.viewWidth['5']};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: ${theme.sizes.rem['sm']};
+
+  @media screen and (max-width: ${theme.pageSizes.smallMonitor}) {
+    width: ${theme.sizes.viewWidth['10']};
+  }
+
+  @media screen and (max-width: ${theme.pageSizes.mobile}) {
+    width: ${theme.sizes.viewWidth['15']};
+  }
 `
 
-export const Button = styled.span`
-  content: '';
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 45px;
-  height: 45px;
-  border-radius: 45px;
-  transition: 0.2s;
-  background: #fff;
-  box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+export const Label = styled.span`
+  font: ${theme.defaultFont};
+  font-size: ${theme.sizes.pxSize['xl']};
 `
 
-export const Label = styled.label`
+export const SunIcon = styled(BsFillSunFill)`
+  color: #fff;
+  height: ${theme.sizes.percentage['100']};
+  width: ${theme.sizes.percentage['100']};
+`
+
+export const MoonIcon = styled(BsFillMoonFill)`
+  color: #000;
+  height: ${theme.sizes.percentage['100']};
+  width: ${theme.sizes.percentage['100']};
+`
+
+export const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   cursor: pointer;
-  width: 100px;
-  height: 50px;
-  background: grey;
-  border-radius: 100px;
-  position: relative;
+  width: ${theme.sizes.percentage['50']};
+  height: ${theme.sizes.percentage['50']};
+  margin: ${theme.sizes.rem['sm']};
 
-  ${Button} {
-    transition: left 0.2s;
+  @media screen and (max-width: ${theme.pageSizes.mobile}) {
+    margin: ${theme.sizes.rem['xs']};
   }
 
-  &:active ${Button} {
-    width: 60px;
+  &:hover ${MoonIcon} {
+    color: ${props => props.theme.buttonHover};
   }
-`
 
-export const Switch = styled.div`
-  ${Checkbox}:checked + ${Label} ${Button} {
-    left: calc(100% - 2px);
-    transform: translateX(-100%);
+  &:hover ${SunIcon} {
+    color: ${props => props.theme.buttonHover};
   }
 `

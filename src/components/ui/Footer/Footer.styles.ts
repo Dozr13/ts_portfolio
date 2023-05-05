@@ -16,12 +16,12 @@ export const StyledFooter = styled.footer`
 export const FooterText = styled.span`
   color: ${props => props.theme.text};
   font: ${theme.defaultFont};
-  font-size: ${theme.sizes.rem['md']};
+  font-size: ${theme.sizes.rem['mdsm']};
 `
 
 export const FooterTextBold = styled.span`
   color: ${props => props.theme.trim};
-  font-size: ${theme.sizes.rem['lg']};
+  font-size: ${theme.sizes.rem['md']};
   font-weight: 900;
   text-decoration: underline;
 `

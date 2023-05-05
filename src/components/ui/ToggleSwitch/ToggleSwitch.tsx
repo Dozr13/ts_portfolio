@@ -1,8 +1,7 @@
 import React from 'react';
 
-import { Checkbox, Label, Button, Switch } from './ToggleSwitch.styles';
+import { ButtonContainer, Label, MoonIcon, SunIcon, ThemeContainer } from './ToggleSwitch.styles';
 import { ThemeMode } from '../../../types/types';
-
 
 interface ToggleSwitchProps {
   toggleTheme: () => void;
@@ -11,20 +10,19 @@ interface ToggleSwitchProps {
 
 const ToggleSwitch = ({ toggleTheme, currentTheme }: ToggleSwitchProps) => {
   const isChecked = currentTheme === 'darkTheme';
-  console.log(isChecked);
+
+  const handleClick = () => {
+    toggleTheme();
+  };
 
   return (
-    <Switch>
-      <Checkbox
-        type="checkbox"
-        checked={isChecked}
-        onChange={toggleTheme}
-      />
-      <Label>
-        {currentTheme ? 'Light Mode' : 'Dark Mode'}
-        <Button className="react-switch-button" onClick={toggleTheme} />
-      </Label>
-    </Switch>
+    <ThemeContainer onClick={handleClick}>
+      <Label>{currentTheme === 'darkTheme' ? 'Light' : 'Dark'}</Label>
+      <ButtonContainer>
+        {isChecked ? <SunIcon /> : <MoonIcon />}
+      </ButtonContainer>
+      <Label>Mode</Label>
+    </ThemeContainer >
   );
 };
 

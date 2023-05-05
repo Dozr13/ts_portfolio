@@ -85,7 +85,7 @@ export const StyledMenu = styled.nav<IsOpenProps>`
     padding: ${theme.sizes.rem['lg']} 0;
     font-weight: bold;
     letter-spacing: ${theme.sizes.rem['xs']};
-    color: #0d0c1d;
+    color: ${props => props.theme.secondaryText};
     text-decoration: none;
     transition: color 0.3s linear;
     text-align: center;
